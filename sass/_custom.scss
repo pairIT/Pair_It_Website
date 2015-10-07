@@ -1,0 +1,35 @@
+$background-color: #d9d9d9;
+$dark-background-color: #333333;
+
+.main-wrapper {
+    background-color: $background-color;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.heading-txt {
+    font-size: 6em;
+    font-weight: 100;
+    margin-top: 1em;
+    margin-bottom:0.5em;
+}
+
+.sub-txt {
+    font-size: 1.5em;
+    font-weight: 100;
+    text-align: right;
+}
+
+.submit-btn {
+    width:100%;
+    background-color: $dark-background-color;
+    color: $background-color;
+}
+
+.submit-btn:hover {
+    width:100%;
+    background-color: #FFC24B;
+    color: $dark-background-color;
+}

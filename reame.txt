@@ -1,0 +1,21 @@
+Hi Everyone :)
+
+I have placed the basics of bootstrap foundation, which will make the font end a breeze! 
+feel free to visit http://getbootstrap.com/components/
+
+I have also used bootstrap sass.
+Why well because it is awesome and makes grouping css so much more organized. 
+how to use sass.
+
+1) create a new file with underscore and the name.scss
+2) In the style.scss import the file you just made.
+    Such as 
+    // Import Bootstrap for Sass
+        @import "bootstrap";
+3) In your html/php only refrence the stylesheet stylesheet/style.css
+    all your code will be compiled into there.
+    
+4) To compile your code, I think install compass... this can eaisly be done in your terminal if you have brew.
+5) cd to where you saved your Pair it files which will be im ..mamp/htdocs for most of us and type in your terminal compass watch.
+6) IF you however do not want to use sass just make a new css file in stylesheet as you would have done.
+
