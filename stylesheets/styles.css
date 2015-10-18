@@ -8605,3 +8605,196 @@ button.close {
   background-color: #FFC24B;
   color: #333333;
 }
+
+/* line 1, ../sass/_profile.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 110px;
+  width: 0;
+  height: 100%;
+  margin-left: -110px;
+  overflow-y: auto;
+  background: #414141;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 17, ../sass/_profile.scss */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+/* line 24, ../sass/_profile.scss */
+#sidebar-wrapper-two {
+  z-index: 900;
+  position: fixed;
+  left: 220px;
+  width: 0;
+  height: 100%;
+  margin-left: -220px;
+  overflow-y: auto;
+  background: #E54047;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Sidebar Styles */
+/* line 42, ../sass/_profile.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 51, ../sass/_profile.scss */
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 56, ../sass/_profile.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: red;
+    background: rgba(255,255,255,0.2);
+}
+*/
+/*
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+*/
+/*
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+*/
+/*
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+*/
+@media (min-width: 768px) {
+  /* line 97, ../sass/_profile.scss */
+  #wrapper {
+    padding-left: 210px;
+  }
+
+  /* line 102, ../sass/_profile.scss */
+  #sidebar-wrapper {
+    width: 110px;
+  }
+
+  /* line 106, ../sass/_profile.scss */
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+}
+/* line 113, ../sass/_profile.scss */
+.sidebar-nav-two {
+  position: absolute;
+  top: 0;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 122, ../sass/_profile.scss */
+.sidebar-nav-two li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 127, ../sass/_profile.scss */
+.sidebar-nav-two li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: red;
+    background: rgba(255,255,255,0.2);
+}
+*/
+/*
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+*/
+/*
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+*/
+/*
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+*/
+@media (min-width: 768px) {
+  /* line 168, ../sass/_profile.scss */
+  #wrapper-twp {
+    padding-left: 210px;
+  }
+
+  /* line 173, ../sass/_profile.scss */
+  #sidebar-wrapper-two {
+    width: 220px;
+  }
+
+  /* line 177, ../sass/_profile.scss */
+  #page-content-wrapper-two {
+    padding: 20px;
+    position: relative;
+  }
+}
+/* line 186, ../sass/_profile.scss */
+.img-logo-profile {
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
