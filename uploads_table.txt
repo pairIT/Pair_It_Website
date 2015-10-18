@@ -1,0 +1,55 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 18, 2015 at 09:45 AM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `TestPairIt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uploads`
+--
+
+CREATE TABLE `uploads` (
+  `id` int(11) NOT NULL,
+  `img_name` varchar(250) DEFAULT NULL,
+  `img_path` varchar(250) DEFAULT NULL,
+  `img_type` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `uploads`
+--
+
+INSERT INTO `uploads` (`id`, `img_name`, `img_path`, `img_type`) VALUES
+(1, '1bc31e96f72a228479fe1379985b6320.jpg', 'photofile/1bc31e96f72a228479fe1379985b6320.jpg', 'image/jpeg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `uploads`
+--
+ALTER TABLE `uploads`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `uploads`
+--
+ALTER TABLE `uploads`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
