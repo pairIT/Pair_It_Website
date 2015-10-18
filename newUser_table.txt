@@ -1,0 +1,66 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 18, 2015 at 11:47 AM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `TestPairIt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(8) NOT NULL,
+  `user_name` varchar(30) NOT NULL,
+  `user_pass` varchar(255) NOT NULL,
+  `user_email` varchar(255) NOT NULL,
+  `user_date` datetime NOT NULL,
+  `user_level` int(8) NOT NULL,
+  `img_name` varchar(500) DEFAULT NULL,
+  `img_path` varchar(500) DEFAULT NULL,
+  `img_type` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `img_name`, `img_path`, `img_type`) VALUES
+(1, 'Marike', '39dfa55283318d31afe5a3ff4a0e3253e2045e43', 'contactmferreira@gmail.com', '2015-10-17 22:37:00', 1, NULL, NULL, NULL),
+(2, 'Ruan', '011c945f30ce2cbafc452f39840f025693339c42', 'ruan@gmail.com', '2015-10-17 22:51:37', 0, NULL, NULL, NULL),
+(3, 'Michelle', '39dfa55283318d31afe5a3ff4a0e3253e2045e43', 'michelle@gmail.com', '2015-10-18 08:50:47', 0, NULL, NULL, NULL),
+(4, 'Therina', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'therina07@yahoo.com', '2015-10-18 11:11:48', 0, NULL, NULL, NULL),
+(5, '', '', '', '0000-00-00 00:00:00', 0, '13.McQueenSp2010PlatosAtlantis.EL.jpg', 'photofile/13.McQueenSp2010PlatosAtlantis.EL.jpg', 'image/jpeg'),
+(6, 'Cara', '8cb2237d0679ca88db6464eac60da96345513964', 'cara@gmail.com', '2015-10-18 11:27:20', 0, '6ee2b24d1343b1c0dafe8120c478385f.jpg', 'photofile/6ee2b24d1343b1c0dafe8120c478385f.jpg', 'image/jpeg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_name_unique` (`user_name`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(8) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
