@@ -2,6 +2,10 @@
 // Check your database config:
 	include 'connect.php';
 	
+	//if(!isset($_POST['search'])) {
+	// If you ever change the header info do it before ALL html on the page
+	//	header("Location:index.php");
+	//}
 ?>
 
 <p>Search</p>
@@ -14,10 +18,6 @@
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-	//if(!isset($_POST['search'])) {
-	// If you ever change the header info do it before ALL html on the page
-	//	header("Location:index.php");
-	//}
 	
 	$search_sql = "SELECT * FROM users WHERE user_name LIKE '%".$_POST['search']."%'";
 	$search_query = mysql_query($search_sql);
@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		while ($search_rs=mysql_fetch_assoc($search_query))
 		{ 
-			echo "<a>" . $search_rs['user_name'] . "</a>";	
+			echo "<p>" . $search_rs['user_name'] . "</p>";
+		
 		}
 	} else
 	{
