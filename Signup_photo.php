@@ -1,13 +1,16 @@
 <?php
 include 'connect.php';
- 
+//header('Location: display_picture.php');
+session_start();
+
 echo '<h3>Register</h3>';
  
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
+   
     echo '
     
-    <form action="signup.php" method="post" enctype="multipart/form-data">
+    <form action="Signup_photo.php" method="post" enctype="multipart/form-data">
     <img src = "photofile/default_profile.jpg" width="70"/>
     <input type="file" name="file_img"/> 
     <p>Username:</p> <input type="text" name="user_name" />
@@ -16,24 +19,28 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
     <p>E-mail:</p> <input type="email" name="user_email">
     <input type="submit" name="btn_upload" value="Sign Up">
     </form>';
-    
 }
+
 
 else
 {
     if(isset($_POST['btn_upload']))
 {
-    $check = getimagesize($_FILES["file_img"]["tmp_name"]);
+    $check = getimagesize($_FILES['file_img']['tmp_name']);
 
         if($check !== false)
         {
-            $filetmp = $_FILES["file_img"]["tmp_name"];//file control name
-            $filename = $_FILES["file_img"]["name"];
-            $filetype = $_FILES["file_img"]["type"];
+            $filetmp = $_FILES['file_img']['tmp_name'];//file control name
+            $filename = $_FILES['file_img']['name'];
+            $filetype = $_FILES['file_img']['type'];
             $filepath = "photofile/".$filename; //photofile = name of folder 
+        
 
             
-            //move_uploaded_file($filetmp,$filepath);
+            move_uploaded_file($filetmp,$filepath);
+            
+            $_SESSION['file_img'] = $filepath;
+            
             //$sql = "INSERT INTO users (img_name,img_path,img_type)
             //VALUES ('$filename','$filepath','$filetype')";
            
@@ -102,12 +109,20 @@ else
     {
         $sql = "INSERT INTO users(user_name, user_pass, user_email ,user_date,
         user_level,img_name,img_path,img_type)
-        VALUES('" . mysql_real_escape_string($_POST['user_name']) . "',
-        '" . sha1($_POST['user_pass']) . "',
-        '" . mysql_real_escape_string($_POST['user_email']) . "',
+        VALUES('" . mysql_real_escape_string($_POST['user_name']) . "','" . sha1($_POST['user_pass']) . "','" .mysql_real_escape_string($_POST['user_email']) . "',
         NOW(),0,'$filename','$filepath','$filetype')";
-
+        
+        $_SESSION['user_name'] = $_POST['user_name'];
+        
+        
+        
+        
+        
         $result = mysql_query($sql);
+        
+        
+        
+        
         if(!$result)
         {
             echo 'Something went wrong while registering. Please try again
@@ -117,9 +132,26 @@ else
         {
             echo 'Successfully registered. You can now <a
             href="signin.php">sign in</a> and start posting!';
+            
+            echo  'Welcome '.$_SESSION['user_name'].'. You are now sucessfully registered. You can now <a
+            href="signin.php">sign in</a> and start posting!<br/>
+            
+            <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
+            
+            
+            
+            
+            ';
+           
+            
+           
+
+            
+               
         }
     }
 }
+
 
 
 ?> 
