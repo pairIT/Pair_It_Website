@@ -1,10 +1,6 @@
 <?php
 // Check your database config:
-    $username="root";
-    $password="root";
-    $database="TestPairIt";
-    mysql_connect(localhost,$username,$password);
-    @mysql_select_db($database) or die("Database Error");
+include 'connect.php';
 
 ?>
 
