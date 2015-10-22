@@ -20,6 +20,8 @@ session_start();
     }
 
 
+
+
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
    
@@ -30,7 +32,8 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
     <input type="submit" name="Update_photo" value="Upload photo">
     </form>';
     
-    if(isset($_POST['btn_upload']))
+    
+if(isset($_POST['Update_photo']))
     {
         $check = getimagesize($_FILES['file_img']['tmp_name']);
 
@@ -57,6 +60,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
     }
     
     
+}
+    
+ else {   
     $errors = array();
     if(isset($_POST['first_name']))
     {
@@ -126,10 +132,10 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
         $location= sanitise($_POST['location']);
         $user_email= sanitise($_POST['user_email']);
         
-         $update="update users SET first_name='$first_name' where user_name=$_SESSION['user_name']";
+        /*$update="update users SET first_name='$first_name' where user_name=$_SESSION['user_name']";
         mysql_query($update);
         
-         $update="update users SET last_name='$last_name' where user_name=$_SESSION['user_name']";
+        $update="update users SET last_name='$last_name' where user_name=$_SESSION['user_name']";
         mysql_query($update);
         
         
@@ -137,7 +143,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
         mysql_query($update);
         
          $update="update users SET user_email='$user_email' where user_name=$_SESSION['user_name']";
-        mysql_query($update);
+        mysql_query($update);*/
         
         
         //session must change
@@ -155,22 +161,15 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
         else
         {
             
-            echo 'Successfully updated.';
+            /*echo 'Successfully updated.';
             
             echo  'Welcome '.$_SESSION['user_name'].'. You are now sucessfully registered. You can now <a
             href="profilePage.php">Profile Page</a> and start posting!<br/>
             
             <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
-            
-            
-            
-            
-            ';
-           
-            
-           
-
-            
+              
+            ';*/
+              
                
         }
     }

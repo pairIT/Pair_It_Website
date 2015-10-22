@@ -118,7 +118,24 @@ else
     {
         $errors[] = 'The location must not be empty.';
     }
-     
+    
+    //function error
+    /*if(isset($_POST['user_email']))
+    {
+        if(!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)){
+            $errors[] = 'Invalid email format';
+        }
+        if(strlen($_POST['user_email']) > 30){
+            $errors[] = 'The location cannot be longer than 30 characters.';
+        }
+        if(strlen($_POST['user_email']) < 5){
+            $errors[] = 'The location cannot be shorter than 5 characters.';
+        }
+    }else
+    {
+        $errors[] = 'The location must not be empty.';
+    }
+     */
     
     if(isset($_POST['user_pass']))
     {
