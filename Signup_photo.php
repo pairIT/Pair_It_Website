@@ -1,6 +1,5 @@
 <?php
 include 'connect.php';
-//header('Location: display_picture.php');
 session_start();
 
 echo '<h3>Register</h3>';
@@ -16,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
     <p>Username:</p> <input type="text" name="user_name" />
     <p>First Name:</p> <input type="text" name="first_name" />
     <p>Last Name:</p> <input type="text" name="last_name" />
+    <p>Location:</p> <input type="text" name="location" />
     <p>Password:</p> <input type="password" name="user_pass">
     <p>Confirm Password:</p> <input type="password" name="user_pass_check">
     <p>E-mail:</p> <input type="email" name="user_email">
@@ -102,6 +102,22 @@ else
     {
         $errors[] = 'The last name must not be empty.';
     }
+    
+    if(isset($_POST['location']))
+    {
+        if(!preg_match('/^[a-z0-9 .\-]+$/i', $_POST['location'])){
+            $errors[] = 'The location can only contain letters and digits.';
+        }
+        if(strlen($_POST['location']) > 30){
+            $errors[] = 'The location cannot be longer than 30 characters.';
+        }
+        if(strlen($_POST['location']) < 5){
+            $errors[] = 'The location cannot be shorter than 5 characters.';
+        }
+    }else
+    {
+        $errors[] = 'The location must not be empty.';
+    }
      
     
     if(isset($_POST['user_pass']))
@@ -128,12 +144,17 @@ else
     else
     {
         $sql = "INSERT INTO users(user_name, user_pass, user_email ,user_date,
-        user_level,img_name,img_path,img_type,first_name,last_name)
+        user_level,img_name,img_path,img_type,first_name,last_name,location)
         VALUES('" . mysql_real_escape_string($_POST['user_name']) . "','" . sha1($_POST['user_pass']) . "','" .mysql_real_escape_string($_POST['user_email']) . "',
-        NOW(),0,'$filename','$filepath','$filetype','" . mysql_real_escape_string($_POST['first_name']) . "','" . mysql_real_escape_string($_POST['last_name']) . "')";
+        NOW(),0,'$filename','$filepath','$filetype','" . mysql_real_escape_string($_POST['first_name']) . "','" . mysql_real_escape_string($_POST['last_name']) . "','" . mysql_real_escape_string($_POST['location']) . "')";
+        
+        
         
         $_SESSION['user_name'] = $_POST['user_name'];
-        
+        $_SESSION['first_name'] = $_POST['first_name'];
+        $_SESSION['last_name'] = $_POST['last_name'];
+        $_SESSION['location'] = $_POST['location'];
+        $_SESSION['user_email'] = $_POST['user_email'];
         
         
         
@@ -150,6 +171,7 @@ else
         }
         else
         {
+            
             echo 'Successfully registered. You can now <a
             href="signin.php">sign in</a> and start posting!';
             
