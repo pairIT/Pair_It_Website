@@ -6,7 +6,7 @@
     height: 100%;
     margin-left: -110px;
     overflow-y: auto;
-    background: #414141;
+    background: #333333;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -30,6 +30,21 @@
     margin-left: -220px;
     overflow-y: auto;
     background: #E54047;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper-two-yellow {
+    z-index: 900;
+    position: fixed;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    background: #EAAC3B;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -189,4 +204,22 @@
     margin-left: auto; 
     margin-right: auto; 
     margin-top:20px;
+}
+
+
+.img-logo-profile-pic {
+    width:200px; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top:50px;
+}
+
+.verticalLine {
+    border-left: thin solid #D9D9D9;
+    height: 370px;
+    margin-left: 55px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
 }

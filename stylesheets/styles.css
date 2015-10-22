@@ -8593,17 +8593,33 @@ button.close {
 }
 
 /* line 25, ../sass/_custom.scss */
+.sub-txt-p {
+  font-size: 1.2em;
+  font-weight: 100;
+  text-align: right;
+  color: #D9D9D9;
+  text-align: center;
+}
+
+/* line 34, ../sass/_custom.scss */
 .submit-btn {
   width: 100%;
   background-color: #333333;
   color: #d9d9d9;
 }
 
-/* line 31, ../sass/_custom.scss */
+/* line 40, ../sass/_custom.scss */
 .submit-btn:hover {
   width: 100%;
   background-color: #FFC24B;
   color: #333333;
+}
+
+/* line 46, ../sass/_custom.scss */
+.error-txt {
+  text-align: center;
+  color: #DD3547;
+  font-weight: 300;
 }
 
 /* line 1, ../sass/_profile.scss */
@@ -8615,7 +8631,7 @@ button.close {
   height: 100%;
   margin-left: -110px;
   overflow-y: auto;
-  background: #414141;
+  background: #333333;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -8645,8 +8661,24 @@ button.close {
   transition: all 0.5s ease;
 }
 
+/* line 39, ../sass/_profile.scss */
+#sidebar-wrapper-two-yellow {
+  z-index: 900;
+  position: fixed;
+  left: 220px;
+  width: 0;
+  height: 100%;
+  margin-left: -220px;
+  overflow-y: auto;
+  background: #EAAC3B;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 /* Sidebar Styles */
-/* line 42, ../sass/_profile.scss */
+/* line 57, ../sass/_profile.scss */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -8656,13 +8688,13 @@ button.close {
   list-style: none;
 }
 
-/* line 51, ../sass/_profile.scss */
+/* line 66, ../sass/_profile.scss */
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 40px;
 }
 
-/* line 56, ../sass/_profile.scss */
+/* line 71, ../sass/_profile.scss */
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
@@ -8702,23 +8734,23 @@ button.close {
 }
 */
 @media (min-width: 768px) {
-  /* line 97, ../sass/_profile.scss */
+  /* line 112, ../sass/_profile.scss */
   #wrapper {
     padding-left: 210px;
   }
 
-  /* line 102, ../sass/_profile.scss */
+  /* line 117, ../sass/_profile.scss */
   #sidebar-wrapper {
     width: 110px;
   }
 
-  /* line 106, ../sass/_profile.scss */
+  /* line 121, ../sass/_profile.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
 }
-/* line 113, ../sass/_profile.scss */
+/* line 128, ../sass/_profile.scss */
 .sidebar-nav-two {
   position: absolute;
   top: 0;
@@ -8728,13 +8760,13 @@ button.close {
   list-style: none;
 }
 
-/* line 122, ../sass/_profile.scss */
+/* line 137, ../sass/_profile.scss */
 .sidebar-nav-two li {
   text-indent: 20px;
   line-height: 40px;
 }
 
-/* line 127, ../sass/_profile.scss */
+/* line 142, ../sass/_profile.scss */
 .sidebar-nav-two li a {
   display: block;
   text-decoration: none;
@@ -8774,27 +8806,45 @@ button.close {
 }
 */
 @media (min-width: 768px) {
-  /* line 168, ../sass/_profile.scss */
+  /* line 183, ../sass/_profile.scss */
   #wrapper-twp {
     padding-left: 210px;
   }
 
-  /* line 173, ../sass/_profile.scss */
+  /* line 188, ../sass/_profile.scss */
   #sidebar-wrapper-two {
     width: 220px;
   }
 
-  /* line 177, ../sass/_profile.scss */
+  /* line 192, ../sass/_profile.scss */
   #page-content-wrapper-two {
     padding: 20px;
     position: relative;
   }
 }
-/* line 186, ../sass/_profile.scss */
+/* line 201, ../sass/_profile.scss */
 .img-logo-profile {
   width: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+}
+
+/* line 210, ../sass/_profile.scss */
+.img-logo-profile-pic {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+/* line 218, ../sass/_profile.scss */
+.verticalLine {
+  border-left: thin solid #D9D9D9;
+  height: 370px;
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

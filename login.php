@@ -22,21 +22,21 @@
                 </div>
                 <div class="col-md-4">
                      <div class="row">
-                        <div class="col-md-4">
+                        <?php 
+                        if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
+                        {
+                            echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+                        }
+                    else
+                        {
+                        if($_SERVER['REQUEST_METHOD'] != 'POST')
+                        {
+                        echo 
+                            '<div class="col-md-4">
                             <h4 class="sub-txt">Email</h4>
                             <h4 class="sub-txt" style="margin-top:25px;">Password</h4>
                         </div>
-                         <div class="col-md-8">
-                             <?php 
-                                if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
-                                {
-                                    echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
-                                }
-                            else
-                                {
-                                if($_SERVER['REQUEST_METHOD'] != 'POST')
-                                {
-                                    
+                         <div class="col-md-8">';
                                  echo '<form method="post" action="">
                                   <input type="text" class="form-control" name="user_name" placeholder="Type your username">                
                                  <br>
@@ -84,7 +84,10 @@
                                         {
                                             if(mysql_num_rows($result) == 0)
                                             {
-                                                echo 'You have supplied a wrong user/password combination. Please try again.';
+                                                echo '<h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4>
+                                                <br>
+                                                <form>
+                                                <button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>';
                                             }
                                             else
                                             {
@@ -102,18 +105,6 @@
                                 }
                             }
                             ?>
-                             
-<!--
-                             <form>
-                                  <input type="email" class="form-control" id="InputEmail1" placeholder="Type your email address">                
-                                 <br>
-                                 <input type="password" class="form-control" id="InputPassword1" placeholder="Type your password">
-                        </div>
-                     </div>
-                    <br>
-                    <button type="submit" class="btn btn-default submit-btn">Submit</button>
-                    </form>
--->
                 </div>
                 <div class="col-md-4">
                 </div>
@@ -122,5 +113,10 @@
     </div>
 </body>
     
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 <script src="javascripts/bootstrap.min.js"></script>    
 </html>

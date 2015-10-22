@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Profile</title>
+<title>Blog</title>
  
 <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/90c6be3155/UntitledProject1/style.css">
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/69579089ee/UntitledProject1/style.css">
 
 </head>
 
@@ -32,13 +32,13 @@
         <!-- /#sidebar-wrapper -->
         
         <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two">
+        <div id="sidebar-wrapper-two-yellow">
             <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <a href="profile.php"><i class="profile-06" style="margin-left:120px; color:#333; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="blog.php"><i class="blog" style="margin-left:120px; color:#333333; font-size:90px;"></i></a>
+            <a href="blog.php/"><i class="blog" style="margin-left:120px; color:#33; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="notifications.php"><i class="notifications" style="margin-left:120px; color:#333333; font-size:90px;"></i></a>
+            <a href="notifications.php"><i class="notifications" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -46,10 +46,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                         <img src="images/Round-profile-2.png" class="img-logo-profile-pic">
-                        <hr>
-                         
+                    <div class="col-lg-12">                         
                     </div>
                 </div>
             </div>
