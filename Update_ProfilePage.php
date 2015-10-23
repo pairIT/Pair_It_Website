@@ -161,14 +161,14 @@ if(isset($_POST['Update_photo']))
         else
         {
             
-            /*echo 'Successfully updated.';
+            echo 'Successfully updated.';
             
             echo  'Welcome '.$_SESSION['user_name'].'. You are now sucessfully registered. You can now <a
             href="profilePage.php">Profile Page</a> and start posting!<br/>
             
             <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
               
-            ';*/
+            ';
               
                
         }
