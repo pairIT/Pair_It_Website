@@ -1,6 +1,6 @@
 <?php
     
-    $local = false;
+    $local = true;
     if ($local)
     {
         $username="root";
