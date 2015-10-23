@@ -1,0 +1,96 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.9
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Oct 23, 2015 at 09:25 AM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `TestPairIt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
+  `brand_name` varchar(50) DEFAULT NULL,
+  `varietal` varchar(50) DEFAULT NULL,
+  `vintage` int(11) DEFAULT NULL,
+  `post_id` int(11) DEFAULT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `brand_name`, `varietal`, `vintage`, `post_id`, `user_id`) VALUES
+(1, 'Diemersdal', 'Sauvignon Blanc', 2010, 1, 2),
+(2, 'Nederberg', 'Sauvignon Blanc', 2000, 2, 1),
+(3, 'Diemersdal', 'Shiraz', 1992, 4, 1),
+(4, 'Tall Horse', 'Shiraz', 2011, 3, 1),
+(5, 'Nederberg', 'Shiraz', 1999, 5, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post`
+--
+
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL,
+  `question` varchar(255) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`id`, `question`, `description`, `user_id`) VALUES
+(1, 'What would go well with a Thanksgiving Turkey dish?', 'Thanksgiving', 1),
+(2, 'Should I pair a wine with dessert?', 'Date night', 3),
+(3, 'What wine to pair with chicken dish', 'sweet and sour chicken', 2),
+(4, 'What to pair with prawns', 'With rice and lemon butter', 2),
+(5, 'Which wine would suit a sushi dish?', 'Avo maki, Salmon roses, Califronia rolls', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `post`
+--
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `post`
+--
+ALTER TABLE `post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
