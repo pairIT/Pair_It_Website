@@ -1,6 +1,7 @@
 <?php
 
 include 'connect.php';
+session_start();
 
 echo '<h3>Sign in</h3>';
  
@@ -61,11 +62,11 @@ else
                     $_SESSION['signed_in'] = true;
                     while($row = mysql_fetch_assoc($result))
                     {
-                        $_SESSION['user_id']    = $row['user_id'];
+						$_SESSION['user_id']    = $row['user_id'];
                         $_SESSION['user_name']  = $row['user_name'];
                         $_SESSION['user_level'] = $row['user_level'];
                     }
-echo 'Welcome, ' . $_SESSION['user_name'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'] . '. <a href="home.php">Proceed to the forum overview</a>.';
                 }
             }
         }
