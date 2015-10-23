@@ -1,6 +1,7 @@
 <?php
-include 'connect.php';
 session_start();
+include 'connect.php';
+
 
  class User
     {
@@ -210,3 +211,6 @@ if(isset($_POST['Update_photo']))
          </body>
 </html>
 
+<?php
+    mysql_close();
+?>

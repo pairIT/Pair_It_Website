@@ -1,7 +1,7 @@
 <?php
-
-include 'connect.php';
 session_start();
+include 'connect.php';
+
 
 echo '<h3>Sign in</h3>';
  
@@ -13,7 +13,7 @@ else
 {
     if($_SERVER['REQUEST_METHOD'] != 'POST')
     {
-        echo '<form method="post" action="">
+        echo '<form method="post" action="signin.php">
         <p>Username:</p> <input type="text" name="user_name" />
         <p>Password:</p> <input type="password" name="user_pass">
         <input type="submit" value="Sign in" />
@@ -72,4 +72,8 @@ echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'] . '. <a h
         }
     }
 }
+?>
+
+<?php
+    mysql_close();
 ?>

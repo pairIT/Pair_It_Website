@@ -1,6 +1,7 @@
 <?php
-include 'connect.php';
 session_start();
+include 'connect.php';
+
 
 
 echo $_SESSION['user_name'];
@@ -19,4 +20,8 @@ echo $_SESSION['user_name'];
 */
 
 
+?>
+
+<?php
+    mysql_close();
 ?>

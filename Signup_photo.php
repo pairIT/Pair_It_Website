@@ -1,6 +1,6 @@
 <?php
-include 'connect.php';
 session_start();
+include 'connect.php';
 
 echo '<h3>Register</h3>';
  
@@ -120,7 +120,7 @@ else
     }
     
     //function error
-    /*if(isset($_POST['user_email']))
+    if(isset($_POST['user_email']))
     {
         if(!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)){
             $errors[] = 'Invalid email format';
@@ -135,7 +135,7 @@ else
     {
         $errors[] = 'The location must not be empty.';
     }
-     */
+     
     
     if(isset($_POST['user_pass']))
     {
@@ -214,3 +214,8 @@ else
 
 
 ?> 
+
+
+<?php
+    mysql_close();
+?>

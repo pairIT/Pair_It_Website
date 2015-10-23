@@ -1,6 +1,7 @@
 <?php
-        include 'connect.php';
-        session_start();
+session_start();        
+include 'connect.php';
+        
 
 class Post
 {
