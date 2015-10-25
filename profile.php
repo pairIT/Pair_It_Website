@@ -12,7 +12,7 @@
 
 <body class="main-wrapper">
     <div id="wrapper">
-
+        
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -44,23 +44,28 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
+        <?php
+        session_start();
+        include 'connect.php';
+
+        echo '
+                    <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row" style="margin-top:70px;">
                     <div class="col-lg-12">
-                        <a href="">
+                        <a href="Update_ProfilePage.php">
                             <div class="circle">
                                 <i class="fa fa-pencil edit-btn"></i>
                             </div>
                         </a>
-                         <img src="images/profile.png" class="img-logo-profile-pic">
-                        <br><br>
-                        <h4 class="sub-txt-style2">Chloe Swartz</h4>
+                         <img src="http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'" class="img-logo-profile-pic">
+                        <br><br> 
+                            <h4 class="sub-txt-style2">'.$_SESSION['user_name'].'</h4>
                         <hr class="hr-white">
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
-                                <button type="button" class="btn btn-default profile-btn">My Rating 12</button>
+                                <button type="button" class="btn btn-default profile-btn">My Reputation 12</button>
                             </div>
                             <div class="col-sm-5">
                                 <button type="button" class="btn btn-default profile-btn">Following 500</button>
@@ -79,8 +84,26 @@
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['first_name'].'</h4>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['last_name'].'</h4>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">South Africa</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['location'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -89,7 +112,7 @@
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">Swartz@gmail.com</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['user_email'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -97,6 +120,13 @@
                 </div>
             </div>
         </div>
+        
+        ';
+        ?>
+
+        <?php
+            mysql_close();
+        ?>
         <!-- /#page-content-wrapper -->
 
     </div>

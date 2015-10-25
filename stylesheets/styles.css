@@ -8936,3 +8936,19 @@ a:hover {
   margin-left: 56%;
   margin-bottom: -248px;
 }
+
+/* line 263, ../sass/_profile.scss */
+ul li {
+  text-decoration: none;
+  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 271, ../sass/_profile.scss */
+li {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
