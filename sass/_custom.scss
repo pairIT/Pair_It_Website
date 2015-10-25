@@ -22,12 +22,25 @@ $dark-background-color: #333333;
     text-align: right;
 }
 
+.sub-txt-style2 {
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+}
+
 .sub-txt-p {
     font-size: 1.2em;
     font-weight: 100;
-    text-align: right;
     color:#D9D9D9;
     text-align: center;
+//    margin:40px 15px 0px 15px;
+}
+
+.default-p {
+    font-size: 1em;
+    font-weight: 100;
+    color:#646464;
+    text-align: left;
 //    margin:40px 15px 0px 15px;
 }
 
@@ -43,8 +56,34 @@ $dark-background-color: #333333;
     color: $dark-background-color;
 }
 
+.profile-btn {
+    width:100%;
+    background-color: $dark-background-color;
+    color: $background-color;
+     padding:15px;
+}
+
+.profile-btn:hover {
+    width:100%;
+    background-color: #E54047;
+    color: #fff;
+    padding:15px;
+}
+
 .error-txt {
     text-align:center; 
     color:#DD3547; 
     font-weight:300;
+}
+
+.icons:hover{
+    color:#fff;
+}
+
+.icons{
+    color:#333333;
+}
+
+.icons-active{
+    color:#fff;
 }

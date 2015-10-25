@@ -5,7 +5,8 @@
 <title>Profile</title>
  
 <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/90c6be3155/UntitledProject1/style.css">
+<link rel="stylesheet" href="fonts/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 
@@ -34,22 +35,64 @@
         <!-- Sidebar 2-->
         <div id="sidebar-wrapper-two">
             <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="blog.php"><i class="blog" style="margin-left:120px; color:#333333; font-size:90px;"></i></a>
+            <a href="blog.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="notifications.php"><i class="notifications" style="margin-left:120px; color:#333333; font-size:90px;"></i></a>
+            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="margin-top:70px;">
                     <div class="col-lg-12">
-                         <img src="images/Round-profile-2.png" class="img-logo-profile-pic">
-                        <hr>
-                         
+                        <a href="">
+                            <div class="circle">
+                                <i class="fa fa-pencil edit-btn"></i>
+                            </div>
+                        </a>
+                         <img src="images/profile.png" class="img-logo-profile-pic">
+                        <br><br>
+                        <h4 class="sub-txt-style2">Chloe Swartz</h4>
+                        <hr class="hr-white">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-5">
+                                <button type="button" class="btn btn-default profile-btn">My Rating 12</button>
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="button" class="btn btn-default profile-btn">Following 500</button>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">About Me</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">There are few things in life that gives me as much pleasure as food and wine. As a young girl I had always a love for food, and now I marval in the combinations of colours and emotions each time I take a sip of marvelous wine with its host of delious food.</h4>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">South Africa</h4>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">Swartz@gmail.com</h4>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
                     </div>
                 </div>
             </div>

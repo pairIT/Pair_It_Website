@@ -196,7 +196,15 @@
 
 }        
 
-
+.hr-white {
+    width: 83%;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#212020;
+    color:#212020;
+    border: 0 none;
+}
 
 .img-logo-profile {
     width:50px; 
@@ -212,7 +220,7 @@
     display: block;
     margin-left: auto; 
     margin-right: auto; 
-    margin-top:50px;
+    margin-top:200px;
 }
 
 .verticalLine {
@@ -222,4 +230,32 @@
     margin-top: 30px;
     margin-bottom: 20px;
     
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.edit-btn{
+    color:#fff;
+    margin-left: 20px; 
+    margin-top: 15px;   
+}
+
+.circle {
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+    background-color: #212020;
+    margin-left:56%;
+    margin-bottom: -248px;
+}
+
+.circle:hover {
+    border-radius: 50%;
+	width: 50px;
+	height: 50px;
+    background-color: #E54047;
+    margin-left:56%;
+    margin-bottom: -248px;
 }

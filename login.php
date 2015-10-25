@@ -3,16 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <title>Login</title>
- 
+    
 <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
-
+    
 </head>
  
 <body class="main-wrapper">
     
-    <?php
-        include 'connect.php';
-    ?>
+    <?php include 'connect.php'; ?>
     
     <div class="row">
         <div class="col-md-12">
@@ -31,21 +29,19 @@
                         {
                         if($_SERVER['REQUEST_METHOD'] != 'POST')
                         {
-                        echo 
-                            '<div class="col-md-4">
-                            <h4 class="sub-txt">Email</h4>
-                            <h4 class="sub-txt" style="margin-top:25px;">Password</h4>
-                        </div>
-                         <div class="col-md-8">';
+                        echo '<div class="col-md-4">
+                                <h4 class="sub-txt">Email</h4>
+                                <h4 class="sub-txt" style="margin-top:25px;">Password</h4>
+                             </div>
+                             <div class="col-md-8">';
                                  echo '<form method="post" action="">
-                                  <input type="text" class="form-control" name="user_name" placeholder="Type your username">                
-                                 <br>
-                                 <input type="password" class="form-control" name="user_pass" placeholder="Type your password">
-                                </div>
-                                    </div>
-                                    <br>
-                                <button type="submit" value="Sign in" class="btn btn-default submit-btn">Submit</button>
-                                </form>';         
+                                            <input type="text" class="form-control" name="user_name" placeholder="Type your username"><br>
+                                            <input type="password" class="form-control" name="user_pass" placeholder="Type your password">
+                                            </div>
+                                            </div>
+                                            <br>
+                                            <button type="submit" value="Sign in" class="btn btn-default submit-btn">Submit</button>
+                                        </form>';         
                                     
                                 }
                                 else
@@ -84,10 +80,8 @@
                                         {
                                             if(mysql_num_rows($result) == 0)
                                             {
-                                                echo '<h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4>
-                                                <br>
-                                                <form>
-                                                <button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>';
+                                                echo '<h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4><br>
+                                                <form><button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>';
                                             }
                                             else
                                             {

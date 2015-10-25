@@ -8593,33 +8593,78 @@ button.close {
 }
 
 /* line 25, ../sass/_custom.scss */
+.sub-txt-style2 {
+  font-size: 2em;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* line 31, ../sass/_custom.scss */
 .sub-txt-p {
   font-size: 1.2em;
   font-weight: 100;
-  text-align: right;
   color: #D9D9D9;
   text-align: center;
 }
 
-/* line 34, ../sass/_custom.scss */
+/* line 39, ../sass/_custom.scss */
+.default-p {
+  font-size: 1em;
+  font-weight: 100;
+  color: #646464;
+  text-align: left;
+}
+
+/* line 47, ../sass/_custom.scss */
 .submit-btn {
   width: 100%;
   background-color: #333333;
   color: #d9d9d9;
 }
 
-/* line 40, ../sass/_custom.scss */
+/* line 53, ../sass/_custom.scss */
 .submit-btn:hover {
   width: 100%;
   background-color: #FFC24B;
   color: #333333;
 }
 
-/* line 46, ../sass/_custom.scss */
+/* line 59, ../sass/_custom.scss */
+.profile-btn {
+  width: 100%;
+  background-color: #333333;
+  color: #d9d9d9;
+  padding: 15px;
+}
+
+/* line 66, ../sass/_custom.scss */
+.profile-btn:hover {
+  width: 100%;
+  background-color: #E54047;
+  color: #fff;
+  padding: 15px;
+}
+
+/* line 73, ../sass/_custom.scss */
 .error-txt {
   text-align: center;
   color: #DD3547;
   font-weight: 300;
+}
+
+/* line 79, ../sass/_custom.scss */
+.icons:hover {
+  color: #fff;
+}
+
+/* line 83, ../sass/_custom.scss */
+.icons {
+  color: #333333;
+}
+
+/* line 87, ../sass/_custom.scss */
+.icons-active {
+  color: #fff;
 }
 
 /* line 1, ../sass/_profile.scss */
@@ -8822,7 +8867,18 @@ button.close {
     position: relative;
   }
 }
-/* line 201, ../sass/_profile.scss */
+/* line 199, ../sass/_profile.scss */
+.hr-white {
+  width: 83%;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #212020;
+  color: #212020;
+  border: 0 none;
+}
+
+/* line 209, ../sass/_profile.scss */
 .img-logo-profile {
   width: 50px;
   display: block;
@@ -8831,20 +8887,52 @@ button.close {
   margin-top: 20px;
 }
 
-/* line 210, ../sass/_profile.scss */
+/* line 218, ../sass/_profile.scss */
 .img-logo-profile-pic {
   width: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 
-/* line 218, ../sass/_profile.scss */
+/* line 226, ../sass/_profile.scss */
 .verticalLine {
   border-left: thin solid #D9D9D9;
   height: 370px;
   margin-left: 55px;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+/* line 235, ../sass/_profile.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 239, ../sass/_profile.scss */
+.edit-btn {
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* line 245, ../sass/_profile.scss */
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #212020;
+  margin-left: 56%;
+  margin-bottom: -248px;
+}
+
+/* line 254, ../sass/_profile.scss */
+.circle:hover {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #E54047;
+  margin-left: 56%;
+  margin-bottom: -248px;
 }
