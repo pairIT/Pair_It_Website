@@ -21,13 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     VALUES ('$post_post->question', '$post_post->description', '$post_post->user_id')");
 }
 
+echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'];
+
 ?>
 
 
 <html>
     <form id="form1" name="form1" method="post" action="home.php">
         <h1>Post a Question</h1>
-        <h3>Question</h3>
+        <h4>Question</h4>
         <input name="question" type="text" id="question"/>
         <h3>Description</h3>
         <input name="description" type="text" id="desctription"/>
@@ -49,7 +51,7 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
     
     echo "<a href='Single_post.php?post_id=$id'>"; 
     echo "<h3>Q: $question</h3>";
-    echo "<h4>Description: $description</h4></a>";
+    echo "<p>Description: $description</p></a>";
 }
     
         ?>

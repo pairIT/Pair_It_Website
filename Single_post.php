@@ -14,7 +14,7 @@ class Comment
     public $user_id;
 }
 
-echo "Request Method: " . $_SERVER["REQUEST_METHOD"];
+echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
