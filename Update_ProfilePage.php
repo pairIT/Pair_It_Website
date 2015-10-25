@@ -3,13 +3,13 @@ session_start();
 include 'connect.php';
 
 
-if (isset($_SESSION['user_name'])) {
+/*if (isset($_SESSION['user_name'])) {
 $username = $_SESSION['user_name'];
 }
 
 else {
 echo "You have not signed in";
-}
+}*/
 
  
 
@@ -54,7 +54,8 @@ else
 
 
 
-            } else {
+            } else 
+            {
                 echo "File is not an image";
             }
     }
@@ -165,27 +166,23 @@ else
         $last_name= sanitise($_POST['last_name']);
         $location= sanitise($_POST['location']);
         $user_email= sanitise($_POST['user_email']);
+        $user_name = $_SESSION['user_name'];
+        
+        echo 'Profile of ' . $_SESSION['user_name'].'.<br/>';
         
         
-        /echo 'Profile of '.$username'.<br/>
-        
-        
-        ';
-        
-        
-        $update="UPDATE users SET first_name='$first_name' WHERE user_name=$username";
+        $update ="UPDATE users SET first_name='$first_name' WHERE user_name= '$user_name'";
         $inserted=mysql_query($update);
         
-        $update="UPDATE users SET last_name='$last_name' WHERE user_name=$username";
+        $update="UPDATE users SET last_name='$last_name' WHERE user_name= '$user_name' ";
          $inserted=mysql_query($update);
         
         
-        $update="UPDATE users SET location='$location' WHERE user_name=$username";
+        $update="UPDATE users SET location='$location' WHERE user_name='$user_name'";
          $inserted=mysql_query($update);
         
-         $update="UPDATE users SET user_email='$user_email' WHERE user_name=$username";
+         $update="UPDATE users SET user_email='$user_email' WHERE user_name= '$user_name'";
          $inserted=mysql_query($update);
-        
         
         //session must change
         
