@@ -17,7 +17,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <img src="images/logo.png" class="img-logo-profile">
+                    <img src="photofile/logo.png" class="img-logo-profile">
                 </li>
                 <li>
                     <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
