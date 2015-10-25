@@ -56,6 +56,12 @@ $dark-background-color: #333333;
     color: $dark-background-color;
 }
 
+.submit-btn:hover {
+    width:100%;
+    background-color: #FFC24B;
+    color: $dark-background-color;
+}
+
 .profile-btn {
     width:100%;
     background-color: $dark-background-color;

@@ -8630,6 +8630,13 @@ button.close {
 }
 
 /* line 59, ../sass/_custom.scss */
+.submit-btn:hover {
+  width: 100%;
+  background-color: #FFC24B;
+  color: #333333;
+}
+
+/* line 65, ../sass/_custom.scss */
 .profile-btn {
   width: 100%;
   background-color: #333333;
@@ -8637,7 +8644,7 @@ button.close {
   padding: 15px;
 }
 
-/* line 66, ../sass/_custom.scss */
+/* line 72, ../sass/_custom.scss */
 .profile-btn:hover {
   width: 100%;
   background-color: #E54047;
@@ -8645,24 +8652,24 @@ button.close {
   padding: 15px;
 }
 
-/* line 73, ../sass/_custom.scss */
+/* line 79, ../sass/_custom.scss */
 .error-txt {
   text-align: center;
   color: #DD3547;
   font-weight: 300;
 }
 
-/* line 79, ../sass/_custom.scss */
+/* line 85, ../sass/_custom.scss */
 .icons:hover {
   color: #fff;
 }
 
-/* line 83, ../sass/_custom.scss */
+/* line 89, ../sass/_custom.scss */
 .icons {
   color: #333333;
 }
 
-/* line 87, ../sass/_custom.scss */
+/* line 93, ../sass/_custom.scss */
 .icons-active {
   color: #fff;
 }

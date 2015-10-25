@@ -49,7 +49,7 @@
         include 'connect.php';
 
         echo '
-                    <div id="page-content-wrapper">
+            <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row" style="margin-top:70px;">
                     <div class="col-lg-12">
@@ -83,39 +83,31 @@
                         
                         <div class="row">
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name</h4>
+                            <div class="col-sm-5">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name:</h4>
                                 <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['first_name'].'</h4>
                             </div>
-                            <div class="col-sm-1"></div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name</h4>
+                            <div class="col-sm-5">
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname:</h4>
                                 <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['last_name'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
+
                         
                         <div class="row">
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
+                            <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
                                 <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['location'].'</h4>
                             </div>
-                            <div class="col-sm-1"></div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
+                            <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
                                 <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['user_email'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
