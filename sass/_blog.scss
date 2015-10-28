@@ -1,0 +1,34 @@
+.sidebar-wrapper-blog {
+    z-index: 900;
+    position: fixed;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    background: #EAAC3B;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.search-bar {
+    width: 92%;
+    height:35px;
+    border-radius: 5px;
+    margin:20px 0px 50px 12px;
+    border-style: none;
+    padding:0px 50px 0px 10px;
+}
+
+.search-icon { 
+    margin-left:-40px;
+}
+
+.search {
+    background: none;
+    margin-left:-35px;
+    border: none;
+    color:rgba(255, 255, 255, 0);
+}

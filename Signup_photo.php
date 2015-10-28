@@ -196,21 +196,10 @@ else
             href="profilePage.php">Profile Page</a> and start posting!<br/>
             
             <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
-            
-            
-            
-            
-            ';
-           
-            
-           
-
-            
-               
+            ';      
         }
     }
 }
-
 
 
 ?> 
