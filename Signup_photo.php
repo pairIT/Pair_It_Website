@@ -207,17 +207,17 @@ else
         
         if(!$result)
         {
-            echo 'Something went wrong while registering. Please try again
-            later.';
+            echo 'Something went wrong while registering. Please try again  <a
+            href="Signup_photo.php">Profile Page</a>.';
         }
         else
         {
             
             echo 'Successfully registered. You can now <a
-            href="signin.php">sign in</a> and start posting!';
+            href="login.php">sign in</a> and start posting!';
             
             echo  'Welcome '.$_SESSION['user_name'].'. You are now sucessfully registered. You can now <a
-            href="profilePage.php">Profile Page</a> and start posting!<br/>
+            href="profile.php">Profile Page</a> and start posting!<br/>
             
             <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
             

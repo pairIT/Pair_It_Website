@@ -64,8 +64,37 @@
                         <hr class="hr-white">
                         <div class="row">
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-5">
-                                <button type="button" class="btn btn-default profile-btn">My Reputation 12</button>
+                            <div class="col-sm-5"> ';
+                                    
+                             
+                               
+                                //echo  "The name is ".$_SESSION['user_name']."";
+                                $user_name = $_SESSION['user_name'];
+                                $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
+                                $rep = mysql_result($sql,0,'users.user_rep');
+                                //echo "POINTS = $rep";
+                              
+                               if ($rep >= 0 && $rep <=5)
+                               {
+                                   echo "<h2 type='text' class='btn btn-default profile-btn'>Wine Rookie. 
+                                   Points = $rep</h2>";
+                                } else if ($rep >= 6 && $rep <=20)
+                               {
+                                    echo "<h2 type='text' class='btn btn-default profile-btn'>Wine Enthusiast. 
+                                   Points = $rep</h2>";
+                               } else if ($rep >= 21)
+                               {
+                                    echo "<h2 type='text' class='btn btn-default profile-btn'>Wine Sommaelier. 
+                                   Points = $rep</h2>";
+                               } else
+                               {
+                                   echo "<h2 type='text' class='btn btn-default profile-btn'>No Reputation</h2>";
+                               
+                               }
+
+
+                            echo '
+                                
                             </div>
                             <div class="col-sm-5">
                                 <button type="button" class="btn btn-default profile-btn">Following 500</button>
