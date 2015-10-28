@@ -18,7 +18,18 @@
 
             if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
             {
-                echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
+
+            echo '
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h4 class="sub-txt-center">You are already signed in, you can sign out if you want.</h4><br>                    
+                <a href="signout.php"><button type="button" class="btn btn-default submit-btn" style="max-width50%;">Sign Out</button></a>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+            ';
+
             }
             else
             {
@@ -80,18 +91,33 @@
                     $result = mysql_query($sql);
                     if(!$result)
                     {
-                        echo 'Something went wrong while signing in. Please try again later.';
+                        echo '
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <h4 class="sub-txt error-txt">Something went wrong while signing in. Please try again later.</h4><br>
+                                    <form>
+                                    <button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn" style="max-width50%;">Reload</button></form>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                            ';
                     }
                     else
                     {
                         if(mysql_num_rows($result) == 0)
                         {
                             echo '
- 
-                            <h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4>
-                            <br>
-                            <form>
-                            <button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn" style="max-width50%;">Reload</button></form>';
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4><br>
+                                    <form>
+                                    <button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn" style="max-width50%;">Reload</button></form>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                            ';
                             
                         }
                         else
@@ -103,7 +129,17 @@
                                 $_SESSION['user_name']  = $row['user_name'];
                                 $_SESSION['user_level'] = $row['user_level'];
                             }
-        echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+                            
+                            echo '
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <h4 class="sub-txt-center"> Welcome, ' . $_SESSION['user_name'] . " "  . '.</h4><br>
+                                    <a href="index.php"><button type="button" class="btn btn-default submit-btn" style="max-width50%;">Proceed to the forum overview</button></a>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                            ';
                         }
                     }
                 }
