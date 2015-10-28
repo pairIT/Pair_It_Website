@@ -119,7 +119,31 @@ class Post
     public $user_id;
 }
 
+<<<<<<< HEAD
 //echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'];
+=======
+
+$user_level = 0;
+
+if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION['user_level'] == 0 && $user_level == 0)
+{
+    $user_level = 1;
+}
+
+if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION['user_level'] == 2)
+{
+    $user_level = 2;
+}
+
+if($user_level == 0)
+{
+
+echo "<p>To start posting questions and leaving comments please <a href = 'login.php'>log in</a> or <a href='Signup_photo.php'>sign up</a></p>";
+
+}
+
+
+>>>>>>> 97bd5fc1e25bd3c6cb5472f638910800ade6c2b1
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -132,8 +156,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     VALUES ('$post_post->question', '$post_post->description', '$post_post->user_id')");
 }
 
-?>
 
+<<<<<<< HEAD
        <div class="header-sec">
         <div class="row">
             <h4 class="sub-txt" style="text-align:left; margin-left:10px;">Post a Question</h4>   
@@ -161,9 +185,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
      </div>
 
     
+=======
+if($user_level == 1 OR $user_level == 2)
+{
+
+echo "<html>";
+echo "    <form id='form1' name='form1' method='post' action='home.php'>";
+echo "        <h1>Post a Question</h1>";
+echo "        <h4>Question</h4>";
+echo "        <input name='question' type='text' id='question'/>";
+echo "        <h3>Description</h3>";
+echo "        <input name='description' type='text' id='desctription'/>";
+echo "        <input type='submit' name='Submit' value='Submit' /> ";
+echo "    </form>";
+}
+
+?>
+      
+        <h1>News Feed</h1>
+>>>>>>> 97bd5fc1e25bd3c6cb5472f638910800ade6c2b1
         
 <?php
 
+if (isset($_POST["delete"])){
+$query= mysql_query("DELETE FROM post WHERE id = $post_id");
+}   
 
 $rows = mysql_query("SELECT post.id, post.question, post.description FROM post");
 
@@ -176,6 +222,14 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
     echo "<a href='Single_post.php?post_id=$id'>"; 
     echo "<h3>Q: $question</h3>";
     echo "<p>Description: $description</p></a>";
+    
+    if($user_level == 2)
+    {
+        echo "<form id='delete' name='delete' method='post' action='home.php
+post_id='$post_id'>";        
+        echo "<input type='submit' value='Delete Post' />";
+        echo "</form>";
+    }
 }
     
         ?>
