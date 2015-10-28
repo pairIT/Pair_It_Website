@@ -119,9 +119,8 @@ class Post
     public $user_id;
 }
 
-<<<<<<< HEAD
-//echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'];
-=======
+
+echo 'Welcome, ' . $_SESSION['user_name'] . " " . $_SESSION['user_id'];
 
 $user_level = 0;
 
@@ -143,7 +142,6 @@ echo "<p>To start posting questions and leaving comments please <a href = 'login
 }
 
 
->>>>>>> 97bd5fc1e25bd3c6cb5472f638910800ade6c2b1
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -157,7 +155,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 }
 
 
-<<<<<<< HEAD
        <div class="header-sec">
         <div class="row">
             <h4 class="sub-txt" style="text-align:left; margin-left:10px;">Post a Question</h4>   
@@ -184,8 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <h3 class="sub-txt" style="text-align:center; font-size:30px;">News Feed</h3> 
      </div>
 
-    
-=======
+
 if($user_level == 1 OR $user_level == 2)
 {
 
@@ -203,7 +199,6 @@ echo "    </form>";
 ?>
       
         <h1>News Feed</h1>
->>>>>>> 97bd5fc1e25bd3c6cb5472f638910800ade6c2b1
         
 <?php
 
