@@ -8586,27 +8586,34 @@ button.close {
 }
 
 /* line 19, ../sass/_custom.scss */
+.sub-txt-left {
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: left;
+}
+
+/* line 25, ../sass/_custom.scss */
 .sub-txt {
   font-size: 1.5em;
   font-weight: 100;
   text-align: right;
 }
 
-/* line 25, ../sass/_custom.scss */
+/* line 31, ../sass/_custom.scss */
 .sub-txt-center {
   font-size: 1.5em;
   font-weight: 100;
   text-align: center;
 }
 
-/* line 31, ../sass/_custom.scss */
+/* line 37, ../sass/_custom.scss */
 .sub-txt-style2 {
   font-size: 2em;
   font-weight: 100;
   text-align: center;
 }
 
-/* line 37, ../sass/_custom.scss */
+/* line 43, ../sass/_custom.scss */
 .sub-txt-p {
   font-size: 1.2em;
   font-weight: 100;
@@ -8614,7 +8621,7 @@ button.close {
   text-align: center;
 }
 
-/* line 45, ../sass/_custom.scss */
+/* line 51, ../sass/_custom.scss */
 .default-p {
   font-size: 1em;
   font-weight: 100;
@@ -8622,18 +8629,11 @@ button.close {
   text-align: left;
 }
 
-/* line 53, ../sass/_custom.scss */
+/* line 59, ../sass/_custom.scss */
 .submit-btn {
   width: 100%;
   background-color: #333333;
   color: #d9d9d9;
-}
-
-/* line 59, ../sass/_custom.scss */
-.submit-btn:hover {
-  width: 100%;
-  background-color: #FFC24B;
-  color: #333333;
 }
 
 /* line 65, ../sass/_custom.scss */
@@ -8644,6 +8644,13 @@ button.close {
 }
 
 /* line 71, ../sass/_custom.scss */
+.submit-btn:hover {
+  width: 100%;
+  background-color: #FFC24B;
+  color: #333333;
+}
+
+/* line 77, ../sass/_custom.scss */
 .profile-btn {
   width: 100%;
   background-color: #333333;
@@ -8651,7 +8658,7 @@ button.close {
   padding: 15px;
 }
 
-/* line 78, ../sass/_custom.scss */
+/* line 84, ../sass/_custom.scss */
 .profile-btn:hover {
   width: 100%;
   background-color: #E54047;
@@ -8659,29 +8666,29 @@ button.close {
   padding: 15px;
 }
 
-/* line 85, ../sass/_custom.scss */
+/* line 91, ../sass/_custom.scss */
 .error-txt {
   text-align: center;
   color: #DD3547;
   font-weight: 300;
 }
 
-/* line 91, ../sass/_custom.scss */
+/* line 97, ../sass/_custom.scss */
 .icons:hover {
   color: #fff;
 }
 
-/* line 95, ../sass/_custom.scss */
+/* line 101, ../sass/_custom.scss */
 .icons {
   color: #333333;
 }
 
-/* line 99, ../sass/_custom.scss */
+/* line 105, ../sass/_custom.scss */
 .icons-active {
   color: #fff;
 }
 
-/* line 103, ../sass/_custom.scss */
+/* line 109, ../sass/_custom.scss */
 .move {
   margin-left: 145px;
   margin-top: -45px;
@@ -8899,6 +8906,18 @@ button.close {
 }
 
 /* line 209, ../sass/_profile.scss */
+.hr-long {
+  width: 100%;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  color: #fff;
+  border: 0 none;
+  margin-left: -20px;
+}
+
+/* line 220, ../sass/_profile.scss */
 .img-logo-profile {
   width: 50px;
   display: block;
@@ -8907,7 +8926,7 @@ button.close {
   margin-top: 20px;
 }
 
-/* line 218, ../sass/_profile.scss */
+/* line 229, ../sass/_profile.scss */
 .img-logo-profile-pic {
   width: 200px;
   display: block;
@@ -8916,7 +8935,7 @@ button.close {
   margin-top: 200px;
 }
 
-/* line 226, ../sass/_profile.scss */
+/* line 237, ../sass/_profile.scss */
 .verticalLine {
   border-left: thin solid #D9D9D9;
   height: 370px;
@@ -8925,19 +8944,19 @@ button.close {
   margin-bottom: 20px;
 }
 
-/* line 235, ../sass/_profile.scss */
+/* line 246, ../sass/_profile.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 239, ../sass/_profile.scss */
+/* line 250, ../sass/_profile.scss */
 .edit-btn {
   color: #fff;
   margin-left: 20px;
   margin-top: 15px;
 }
 
-/* line 245, ../sass/_profile.scss */
+/* line 256, ../sass/_profile.scss */
 .circle {
   border-radius: 50%;
   width: 50px;
@@ -8947,7 +8966,7 @@ a:hover {
   margin-bottom: -248px;
 }
 
-/* line 254, ../sass/_profile.scss */
+/* line 265, ../sass/_profile.scss */
 .circle:hover {
   border-radius: 50%;
   width: 50px;
@@ -8957,7 +8976,7 @@ a:hover {
   margin-bottom: -248px;
 }
 
-/* line 263, ../sass/_profile.scss */
+/* line 274, ../sass/_profile.scss */
 ul li {
   text-decoration: none;
   display: inline-block;
@@ -8966,7 +8985,7 @@ ul li {
   margin-right: auto;
 }
 
-/* line 271, ../sass/_profile.scss */
+/* line 282, ../sass/_profile.scss */
 li {
   text-decoration: none;
   display: inline-block;
@@ -9010,4 +9029,49 @@ li {
   margin-left: -35px;
   border: none;
   color: rgba(255, 255, 255, 0);
+}
+
+/* line 36, ../sass/_blog.scss */
+.alert-box {
+  background-color: #5FD7C7;
+  padding: 5px 20px 5px 20px;
+  margin-right: 50px;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* line 46, ../sass/_blog.scss */
+.alert-box a {
+  color: #333;
+}
+
+/* line 50, ../sass/_blog.scss */
+.alert-box a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 55, ../sass/_blog.scss */
+.blog-box {
+  height: 200px;
+  width: 40%;
+  border-color: #333;
+  border: 2px;
+  background-color: rgba(245, 242, 242, 0.5);
+  margin: 50px 40px 10px 20px;
+  color: #333;
+}
+
+/* line 65, ../sass/_blog.scss */
+#blog-txt a {
+  color: #333;
+}
+
+/* line 69, ../sass/_blog.scss */
+#blog-txt a:hover {
+  color: #333;
+  text-decoration: none;
+  margin-top: 20px;
 }

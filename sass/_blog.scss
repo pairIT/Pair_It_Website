@@ -32,3 +32,42 @@
     border: none;
     color:rgba(255, 255, 255, 0);
 }
+
+.alert-box {
+    background-color: #5FD7C7;
+    padding: 5px 20px 5px 20px;
+    margin-right:50px;
+    border-radius: 5px;
+    color:#fff;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.alert-box a{
+    color:#333;
+}
+
+.alert-box a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+
+.blog-box {
+    height:200px;
+    width: 40%;
+    border-color: #333;
+    border: 2px;
+    background-color: rgba(245, 242, 242, 0.5);
+    margin:50px 40px 10px 20px;
+    color:#333;
+}
+
+#blog-txt a{
+    color:#333;
+}
+
+#blog-txt a:hover{
+    color:#333;
+    text-decoration: none;
+    margin-top: 20px;
+}

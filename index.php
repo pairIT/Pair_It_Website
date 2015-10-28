@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Profile</title>
+ 
+<link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
+<link rel="stylesheet" href="fonts/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body class="main-wrapper">
+    <div id="wrapper">
+        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <img src="photofile/logo.png" class="img-logo-profile">
+                </li>
+                <li>
+                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
+                </li>
+                <li>
+                    <div class="verticalLine"></div>
+                </li>
+                <li>
+                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <!-- Sidebar 2-->
+        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B;">
+            <br><br><br><br><br>
+            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <br><br><br><br>
+            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
+            <br><br><br><br>
+            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
+        </div>
+    
+        <!-- /#sidebar-wrapper -->
+        
+        
 <?php
 session_start();        
 include 'connect.php';
@@ -29,8 +74,15 @@ if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION[
 if($user_level == 0)
 {
 
-echo "<p>To start posting questions and leaving comments please <a href = 'login.php'>log in</a> or <a href='Signup_photo.php'>sign up</a></p>";
-
+echo '<div class="row" style="margin-left:30px;">
+        <div class="col-md-12">
+            <div class="alert-box">
+                <h4 class="sub-txt-left">To start posting questions and leaving comments please <a href="login.php"> Log In</a> or <a href="Signup_photo.php"> Sign Up</a></h4>
+            </div>
+        <div>
+      </div>
+      <hr class="hr-long">
+      ';
 }
 
 
@@ -50,20 +102,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["question_form"]))
 if($user_level == 1 OR $user_level == 2)
 {
 
-echo "<html>";
-echo "    <form id='question_form' method='post' action='index.php'>";
-echo "        <h1>Post a Question</h1>";
-echo "        <h4>Question</h4>";
-echo "        <input name='question' type='text' id='question'/>";
-echo "        <h3>Description</h3>";
-echo "        <input name='description' type='text' id='desctription'/>";
-echo "        <input type='submit' name='question_form' value='Submit' /> ";
-echo "    </form>";
+echo '<div class="row">
+        <div class="col-sm-4">
+            <form id="question_form" method="post" action="index.php">
+                <h1>Post a Question</h1>
+                <h4>Question</h4>
+                <input name="question" type="text" id="question"/>
+                <h3>Description</h3>
+                <input name="description" type="text" id="desctription"/>
+                <input type="submit" name="question_form" value="Submit" />
+            </form>
+        </div>
+     </div>';    
+    
 }
 
 ?>
       
-        <h1>News Feed</h1>
+        <h4 class="sub-txt-left" style="font-size:40px;">News Feed</h4>
         
         <?php
 
@@ -79,9 +135,16 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
     $question = mysql_result($rows, $i, "post.question");
     $description = mysql_result($rows, $i, "post.description");
     
-    echo "<a href='Single_post.php?post_id=$id'>"; 
-    echo "<h3>Q: $question</h3>";
-    echo "<p>Description: $description</p></a>";
+    echo "
+        <div class='col-md-4 blog-box' style='margin-left:-10px;'>
+            <a href='Single_post.php?post_id=$id'>
+            <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
+            <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>
+    
+        </div>
+    "; 
+    
+
     
     if($user_level == 2)
     {
@@ -101,3 +164,6 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
 <?php
     mysql_close();
 ?>
+</div><!-- /#wrapper -->
+</body>
+</html>
