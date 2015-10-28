@@ -21,6 +21,10 @@
                 <div class="col-md-4">
                      <div class="row">
                         <?php 
+						
+						session_start();
+						include 'connect.php';
+						
                         if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
                         {
                             echo 'You are already signed in, you can <a href="signout.php">sign out</a> if you want.';
@@ -34,7 +38,7 @@
                                 <h4 class="sub-txt" style="margin-top:25px;">Password</h4>
                              </div>
                              <div class="col-md-8">';
-                                 echo '<form method="post" action="">
+                                 echo '<form method="post" action="home.php">
                                             <input type="text" class="form-control" name="user_name" placeholder="Type your username"><br>
                                             <input type="password" class="form-control" name="user_pass" placeholder="Type your password">
                                             </div>
@@ -74,13 +78,13 @@
                                         $result = mysql_query($sql);
                                         if(!$result)
                                         {
-                                            echo 'Something went wrong while signing in. Please try again later.';
+                                            echo 'Something went wrong while signing in. Please try again <a href="login.php">sign in again</a>.';
                                         }
                                         else
                                         {
                                             if(mysql_num_rows($result) == 0)
                                             {
-                                                echo '<h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again.</h4><br>
+                                                echo '<h4 class="sub-txt error-txt">You have supplied a wrong user/password combination. Please try again <a href="login.php">sign in again</a>.</h4><br>
                                                 <form><button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>';
                                             }
                                             else
@@ -92,7 +96,7 @@
                                                     $_SESSION['user_name']  = $row['user_name'];
                                                     $_SESSION['user_level'] = $row['user_level'];
                                                 }
-                            echo 'Welcome, ' . $_SESSION['user_name'] . '. <a href="index.php">Proceed to the forum overview</a>.';
+                            echo 'Welcome, ' . $_SESSION['user_name'] . '. <a href="home.php">Proceed to the home page</a>.';
                                             }
                                         }
                                     }

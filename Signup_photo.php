@@ -3,6 +3,12 @@ session_start();
 include 'connect.php';
 
 echo '<h3>Register</h3>';
+
+
+
+
+
+
  
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
@@ -29,32 +35,49 @@ else
     if(isset($_POST['btn_upload']))
 {
     $check = getimagesize($_FILES['file_img']['tmp_name']);
-
+        
+       
+        $filetmp = $_FILES['file_img']['tmp_name'];//file control name
+        $filename = $_FILES['file_img']['name'];
+        $filetype = $_FILES['file_img']['type'];
+        
         if($check !== false)
         {
-            $filetmp = $_FILES['file_img']['tmp_name'];//file control name
-            $filename = $_FILES['file_img']['name'];
-            $filetype = $_FILES['file_img']['type'];
-            $filepath = "photofile/".$filename; //photofile = name of folder 
-        
-
             
+           
+            
+            $filepath = "photofile/".$filename; //photofile = name of folder 
             move_uploaded_file($filetmp,$filepath);
             
             $_SESSION['file_img'] = $filepath;
             
-          
-            
-            
+          //add default photo    
 
         } else {
             echo "File is not an image";
+            
+            $filename= "default_profile.jpg";
+            $filepath = "photofile/".$filename;
+            move_uploaded_file($filetmp,$filepath);
+            
+            $_SESSION['file_img'] = $filepath;
+             
         }
 }
     
     $errors = array();
     if(isset($_POST['user_name']))
     {
+        $username = $_POST['user_name'];
+        
+        $getUsername = "SELECT user_name FORM users WHRE user_name='$username'";
+        $rows = mysql_query ($getUsername);
+        $userNameData = mysql_result($rows,0,"user_name");
+        
+        if($username == $usernameData){
+            $errors[] = 'The username is already taken.'; 
+        } 
+        
         if(!ctype_alnum($_POST['user_name'])){
             $errors[] = 'The username can only contain letters and digits.';
         }
@@ -64,6 +87,7 @@ else
         if(strlen($_POST['user_name']) < 5){
             $errors[] = 'The username cannot be shorter than 5 characters.';
         }
+        
     }else
     {
         $errors[] = 'The username field must not be empty.';
@@ -119,7 +143,7 @@ else
         $errors[] = 'The location must not be empty.';
     }
     
-    //function error
+   
     if(isset($_POST['user_email']))
     {
         if(!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)){
@@ -183,17 +207,17 @@ else
         
         if(!$result)
         {
-            echo 'Something went wrong while registering. Please try again
-            later.';
+            echo 'Something went wrong while registering. Please try again  <a
+            href="Signup_photo.php">Profile Page</a>.';
         }
         else
         {
             
             echo 'Successfully registered. You can now <a
-            href="signin.php">sign in</a> and start posting!';
+            href="login.php">sign in</a> and start posting!';
             
             echo  'Welcome '.$_SESSION['user_name'].'. You are now sucessfully registered. You can now <a
-            href="profilePage.php">Profile Page</a> and start posting!<br/>
+            href="profile.php">Profile Page</a> and start posting!<br/>
             
             <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
             ';      
