@@ -25,6 +25,14 @@ function add_like($comment_id)
 	$comment_id = (int)$comment_id;
 	mysql_query("UPDATE comments SET comment_likes = comment_likes + 1 WHERE id = $comment_id");
 	mysql_query("INSERT INTO likes ('user_id','comment_id') VALUES (".$_SESSION['user_id'].", $comment_id )");
+    
+    $rows = mysql_query("SELECT comments.post_id, comments.user_id, comments.comment_likes, users.user_rep FROM comments INNER JOIN users ON users.user_id = comments.user_id WHERE comments.id = $comment_id;");
+    
+    $user_id = mysql_result($rows, 0,"comments.user_id");
+    $user_rep = mysql_result($rows, 0,"users.user_rep");
+    $new_rep = $user_rep + 1;
+    
+    mysql_query("UPDATE users set user_rep=$new_rep WHERE user_id=$user_id;");
 }
 
 

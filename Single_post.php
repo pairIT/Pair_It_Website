@@ -101,8 +101,9 @@ WHERE post.id = $post_id;");
         
         echo "<p><strong>$username</strong></p>";
         echo "<p> $brand_name $varietal $vintage</p>";
-		echo "<p><a class='like' href='#' onclick = 'add_like(", $comment_id['comment_id'] ,");'>LIKE</a> <span id='comment_ $comment_id _likes'>$comment_likes</span>likes</p>";
+		echo "<p><a class='like' href='#' name='btn_upload' onclick='add_like(", $comment_id['comment_id'] ,");'>LIKE</a> <span id='comment_ $comment_id _likes'>$comment_likes</span>likes</p>";
     } 
+
 
 ?>
 
