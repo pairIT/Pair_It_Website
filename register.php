@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
         </div>
     </div> 
     <br>
-    <button type="submit" name="btn_upload" class="btn btn-default submit-btn" value="Sign Up" style="margin-bottom:100px;">Submit</button>
+    <input type="submit" name="btn_upload" value="Sign Up" class="btn btn-default submit-btn" style="margin-bottom:100px;">
     </form>';
 }
 
