@@ -68,11 +68,11 @@
                                     
                              
                                
-                                //echo  "The name is ".$_SESSION['user_name']."";
+                                echo  "The name is ".$_SESSION['user_name']."";
                                 $user_name = $_SESSION['user_name'];
                                 $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
                                 $rep = mysql_result($sql,0,'users.user_rep');
-                                //echo "POINTS = $rep";
+                                
                               
                                if ($rep >= 0 && $rep <=5)
                                {
@@ -131,8 +131,7 @@
             </div>
         </div>
         
-        ';
-        ?>
+        ';?>
 
         <?php
             mysql_close();

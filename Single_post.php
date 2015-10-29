@@ -34,13 +34,12 @@
         <!-- Sidebar 2-->
         <div id="sidebar-wrapper-two" style="background-color:#5FD7C7; margin-right:50px;">
             <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <a href="profile.php"><i class="profile-06 icons" style="margin-left:120px; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
+            <a href="index.php"><i class="blog icons-active" style="margin-left:120px; font-size:90px;"></i></a>
             <br><br><br><br>
             <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
         </div>
-
 
 	<script type="text/javascript">
 	function add_like(comment_id) 
@@ -66,9 +65,9 @@
 		});
 		
 	}
-
-
 	</script>
+        
+        <div style="margin-left:50px;">  
 
 		<?php
 			include 'connect.php';
@@ -78,8 +77,16 @@
 		$post_id = $_GET["post_id"];
 		$user_level = 0;
 
-		echo 'Welcome,'. $_SESSION['user_name']. " " . $_SESSION['user_id'];
-		
+
+        echo '<div class="row" style="margin-left:30px;">';
+        echo '<div class="col-md-12">';
+        echo '<div class="alert-box">';
+        echo 'Welcome,'. $_SESSION['user_name']. " " ;          
+        echo '</div>';
+        echo '<div>';
+        echo '</div>';
+        echo '<hr class="hr-long">';
+
 		?>
 			
 		<?php
@@ -96,9 +103,15 @@
 
 			if($user_level == 0)
 			{
-
-			echo "<p>To start posting questions and leaving comments please 
-			<a href = 'login.php'>log in</a> or <a href='Signup_photo.php'>sign up</a></p>";
+                
+                echo '<div class="row" style="margin-left:30px;">
+                <div class="col-md-12">
+                    <div class="alert-box">
+                        <h4 class="sub-txt-left">To start posting questions and leaving comments please <a href="login.php"> Log In</a> or <a href="Signup_photo.php"> Sign Up</a></h4>
+                    </div>
+                <div>
+              </div>
+                ';
 			}
 
 		?>
@@ -139,9 +152,12 @@
 			$question = mysql_result($rows, 0,"post.question");
 			$description = mysql_result($rows, 0,"post.description");
 
-			echo "<p><strong>posted by $username</strong></h3>";
-			echo "<h2>$question</h2>";
-			echo "<h4>$description</h4>";
+
+            echo "<div class='blog-box-new'>";
+            echo "<h4 class='sub-txt-left'> - Posted by $username</h4> <br>";
+			echo "<h4 class='sub-txt-left' style='font-size:40px;'>$question</h4>";
+			echo "<h4 class='sub-txt-left' style='font-size:30px;'>Description - $description</h4>";
+            echo "</div>";
 		?>
 		
 		<?php
@@ -164,7 +180,8 @@
 			comments.user_id, comments.comment_likes, users.user_name  FROM comments INNER JOIN users ON 
 			comments.user_id = users.user_id WHERE comments.post_id = $post_id;");
 
-				echo "<h3> Comments </h3>";
+                echo "<br><h4 class='sub-txt-left'>Comments</div>";
+		
 
 			for ($i = 0; $i < mysql_numrows($rows); $i++)
 			{
@@ -175,9 +192,13 @@
 				$comment_likes = mysql_result($rows, $i,"comments.comment_likes");
 				$comment_id = mysql_result($rows, $i,"comments.id");
 				
-				echo "<p><strong>$username</strong></p>";
+                
+
+				echo "<h4 class='sub-txt-left'><strong>$username</strong></h4>";
 				echo "<p> $brand_name $varietal $vintage</p>";
 				echo "<p><a class='like' href='#' name='btn_upload' onclick='add_like(", $comment_id['comment_id'] ,");'>LIKE</a> <span id='comment_ $comment_id _likes'>$comment_likes</span> likes</p>";
+              
+              
 			} 
 
 
@@ -195,7 +216,7 @@
 			<?php
 			if($user_level == 1 OR $user_level == 2)
 			{
-				echo "<h2>Post a comment</h2>";
+				echo "<h4 class='sub-txt-left'>Post a comment</h4>";
 				echo "<form id='comment' name='comment' method='post' action='Single_post.php?post_id=$post_id'>";
 				echo "<label for='brand'>Brand Name</label>";
 				echo "<input type='text' id='brand' name='brand'/>";
@@ -214,6 +235,7 @@
 
         <script src="js/jquery-1.11.2.js"></script> 
 		<script type="text/javascript" src="jquery.js"></script>
+        </div>
     </div>
     </body>
 </html>

@@ -9086,3 +9086,14 @@ li {
   margin: 250px -400px 10px 20px;
   color: #333;
 }
+
+/* line 85, ../sass/_blog.scss */
+.blog-box-new {
+  height: 200px;
+  border-color: #333;
+  border: 2px;
+  background-color: rgba(245, 242, 242, 0.5);
+  margin: 50px 50px 10px 0px;
+  padding: 10px 20px 10px 20px;
+  color: #333;
+}
