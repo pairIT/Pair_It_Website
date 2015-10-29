@@ -10,6 +10,36 @@
 </head>
 <body class="main-wrapper">
     <div id="wrapper">
+        
+        
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <img src="photofile/logo.png" class="img-logo-profile">
+                </li>
+                <li>
+                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
+                </li>
+                <li>
+                    <div class="verticalLine"></div>
+                </li>
+                <li>
+                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+        <!-- Sidebar 2-->
+        <div id="sidebar-wrapper-two" style="background-color:#5FD7C7; margin-right:50px;">
+            <br><br><br><br><br>
+            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <br><br><br><br>
+            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
+            <br><br><br><br>
+            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
+        </div>
 
 
 	<script type="text/javascript">
