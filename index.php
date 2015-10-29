@@ -31,7 +31,7 @@
         <!-- /#sidebar-wrapper -->
         
         <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B;">
+        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
             <br><br><br><br><br>
             <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
             <br><br><br><br>
@@ -41,7 +41,7 @@
         </div>
     
         <!-- /#sidebar-wrapper -->
-        
+<div style="margin-left:50px;">    
         
 <?php
 session_start();        
@@ -124,13 +124,17 @@ echo '<div class="row">
                 <input type="submit" name="question_form" value="Submit" class="btn btn-default submit-btn"/>
             </form>
         </div>
+        <div class="col-sm-4">
+            <h4 class="sub-txt-left" style="font-size:65px; margin-left:10px;">Did you know wine is good for your heart?</h4>
+        </div>
      </div>';    
     
 }
 
 ?>
-      
+ <br><br>
 <h4 class="sub-txt-left" style="font-size:40px;">News Feed</h4>
+
         
 <?php
 
@@ -161,13 +165,11 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
            }
 }
 ?>
-                        
-    </body>
-</html>
 
 <?php
     mysql_close();
 ?>
+</div>
 </div><!-- /#wrapper -->
 </body>
 </html>

@@ -276,7 +276,7 @@
                         <hr class="hr-white">
                         <div class="row">
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-5">
+                            <div class="col-sm-10">
                                 
                             <?php
                                 
@@ -305,9 +305,6 @@
                                }
                                     
                             ?>
-                            </div>
-                            <div class="col-sm-5">
-                                <button type="button" class="btn btn-default profile-btn">Following 500</button>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>

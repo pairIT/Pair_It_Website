@@ -46,7 +46,9 @@
                             </div>
                             <div class="col-md-8">
                                 <input type="text" name="user_name" class="form-control" placeholder="Type your username"><br>
-                                <input type="password" name="user_pass" class="form-control" placeholder="Type your password">
+                                <input type="password" name="user_pass" class="form-control" placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
+                                <span class="first"></span>
+                                <label type="strength" id="label"></label>
                             </div>
                             <br><br>
                             <div class="row">
@@ -60,7 +62,7 @@
                 <div class="col-md-4"></div>
                 </div>';
             }
-
+                
             else
             {
                 $errors = array();
@@ -158,6 +160,8 @@
         window.history.back();
     }
 </script>
-<script src="javascripts/bootstrap.min.js"></script>  
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.2.js"></script> 
+<script src="js/password.js"></script>
 </body>
 </html>
