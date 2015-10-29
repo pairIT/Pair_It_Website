@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
 	<head>
 		<link rel = "stylesheet" href = "style.css" />
@@ -9,29 +8,29 @@
 	<body>
 
 	<script type="text/javascript">
-	function add_like(comment_id) 
-	{
-		
-		$.post('like_add.php', {comment_id:comment_id},  function(data){
-			if(data == 'success')
-			{
-				// do something
-				like_get(comment_id);
-			} else{
-				alert(data);
-			}
-		});
-		
-	}
+        function add_like(comment_id) 
+        {
 
-	function like_get(comment_id)
-	{
-		
-		$.post('like_get.php', {comment_id:comment_id},  function(data){
-			$('#comment_'+comment_id+'_likes').text(data);
-		});
-		
-	}
+            $.post('like_add.php', {comment_id:comment_id},  function(data){
+                if(data == 'success')
+                {
+                    // do something
+                    like_get(comment_id);
+                } else{
+                    alert(data);
+                }
+            });
+
+        }
+
+        function like_get(comment_id)
+        {
+
+            $.post('like_get.php', {comment_id:comment_id},  function(data){
+                $('#comment_'+comment_id+'_likes').text(data);
+            });
+
+        }
 
 
 	</script>
@@ -179,7 +178,6 @@
 
 		<?php
 		mysql_close();
-=======
 <html>
 	<head>
 		<link rel = "stylesheet" href = "style.css" />
@@ -351,5 +349,4 @@
 
 		<?php
 		mysql_close();
->>>>>>> e51f1ce9d8929a886f050090213e5cefdb8ee36a
-		?>
+        ?>

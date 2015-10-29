@@ -150,19 +150,40 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
     $question = mysql_result($rows, $i, "post.question");
     $description = mysql_result($rows, $i, "post.description");
     
-    echo "
-        <div class='col-md-4 blog-box' style='margin-left:-10px;'>
-            <a href='Single_post.php?post_id=$id'>
-            <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
-            <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>";
-           if($user_level ==2)
-           {
-            echo "<form id='delete' method='post' action='index.php'>
-            <input name='post_id' type='hidden' value='$id' />
-            <input type='submit' name='delete' value='Delete Post' class='btn btn-default submit-btn'/>
-            </form>
-        </div>";
-           }
+    if($user_level ==2)
+        {
+            echo "
+            <div class='col-md-4 blog-box' style='margin-left:-10px;'>
+                <a href='Single_post.php?post_id=$id'>
+                <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
+                <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>
+                <form id='delete' method='post' action='index.php'>
+                    <input name='post_id' type='hidden' value='$id' />
+                    <input type='submit' name='delete' value='Delete Post' class='btn btn-default submit-btn'/>
+                </form>
+            </div>";
+        }
+    
+    else if($user_level ==1)
+        {
+            echo "
+            <div class='col-md-4 blog-box' style='margin-left:-10px;'>
+                <a href='Single_post.php?post_id=$id'>
+                <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
+                <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>
+            </div>";
+        }
+    
+    else if($user_level ==0)
+        {
+            echo "
+            <div class='col-md-4 blog-box' style='margin-left:-10px;'>
+                <a href='Single_post.php?post_id=$id'>
+                <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
+                <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>
+            </div>";
+        }
+    
 }
 ?>
 

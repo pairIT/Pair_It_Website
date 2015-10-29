@@ -46,7 +46,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
             <input type="text" name="last_name" class="form-control" placeholder="Type your lastname"/><br>
             <input type="text" name="location" class="form-control" placeholder="Type your location"/><br>
             <input type="email" name="user_email" class="form-control" placeholder="Type your email address"/><br>
-            <input type="password" name="user_pass" class="form-control" placeholder="Type your password"/><br>
+            <input type="password" name="user_pass" class="form-control" placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
+            <span class="first"></span>
+            <label type="strength" id="label"></label><br>
             <input type="password" name="user_pass_check" class="form-control" placeholder="Confirm your password"/>
         </div>
     </div> 
@@ -247,5 +249,7 @@ else
     }
     </script>
     <script src="javascripts/bootstrap.min.js"></script> 
+    <script src="js/jquery-1.11.2.js"></script> 
+<script src="js/password.js"></script>
 </body>
 </html>
