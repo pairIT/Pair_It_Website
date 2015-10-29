@@ -64,7 +64,7 @@
                         <hr class="hr-white">
                         <div class="row">
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-5"> ';
+                            <div class="col-sm-10"> ';
                                     
                              
                                
@@ -95,17 +95,6 @@
 
                             echo '
                                 
-                            </div>
-                            <div class="col-sm-5">
-                                <button type="button" class="btn btn-default profile-btn">Following 500</button>
-                            </div>
-                            <div class="col-sm-1"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">About Me</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">There are few things in life that gives me as much pleasure as food and wine. As a young girl I had always a love for food, and now I marval in the combinations of colours and emotions each time I take a sip of marvelous wine with its host of delious food.</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
