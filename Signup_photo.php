@@ -247,7 +247,7 @@
                                 <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
                                 </h4>'; 
                                 
-                                echo '<a href="login.php"><button type="button" class="btn btn-default submit-btn">Sign In</button></a><br>';
+                                echo '<a href="login.php"><button type="button" class="btn btn-default submit-btn">Sign In</button></a><br><br>';
                                 echo '<a href="profile.php"><button type="button" class="btn btn-default submit-btn">Profile Page</button></a>';
                             }
                         }

@@ -62,8 +62,18 @@ $user_level = 0;
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION['user_level'] == 0 && $user_level == 0)
 {
     $user_level = 1;
+    
 	
-	echo 'Welcome,'. $_SESSION['user_name']. " " . $_SESSION['user_id'];
+    echo '<div class="row" style="margin-left:30px;">';
+    echo '<div class="col-md-12">';
+    echo '<div class="alert-box">';
+    echo 'Welcome,'. $_SESSION['user_name']. " " ;          
+    echo '</div>';
+    echo '<div>';
+    echo '</div>';
+    echo '<hr class="hr-long">';
+ 
+   
 }
 
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION['user_level'] == 2)
@@ -105,12 +115,13 @@ if($user_level == 1 OR $user_level == 2)
 echo '<div class="row">
         <div class="col-sm-4">
             <form id="question_form" method="post" action="index.php">
-                <h1>Post a Question</h1>
-                <h4>Question</h4>
-                <input name="question" type="text" id="question"/>
-                <h3>Description</h3>
-                <input name="description" type="text" id="desctription"/>
-                <input type="submit" name="question_form" value="Submit" />
+                <h4 class="sub-txt-left" style="font-size:40px;">Post a Question</h4>
+                <h4 class="sub-txt-left" style="font-size:20px;">Question</h4>
+                <input name="question" type="text" id="question" class="form-control"/>
+                <h4 class="sub-txt-left" style="font-size:20px;">Description</h4>
+                <input name="description" type="text" id="desctription" class="form-control"/>
+                <br><br>
+                <input type="submit" name="question_form" value="Submit" class="btn btn-default submit-btn"/>
             </form>
         </div>
      </div>';    
@@ -119,9 +130,9 @@ echo '<div class="row">
 
 ?>
       
-        <h4 class="sub-txt-left" style="font-size:40px;">News Feed</h4>
+<h4 class="sub-txt-left" style="font-size:40px;">News Feed</h4>
         
-        <?php
+<?php
 
 if (isset($_POST["delete"])){
 $query= mysql_query("DELETE FROM post WHERE id = " . $_POST["post_id"]);
@@ -139,24 +150,17 @@ for ($i = 0; $i < mysql_numrows($rows); $i++)
         <div class='col-md-4 blog-box' style='margin-left:-10px;'>
             <a href='Single_post.php?post_id=$id'>
             <h4 class='sub-txt-left' style='color:#333; margin:40px 15px 10px 15px;' id=''>Question<br><br> $question</h4>
-            <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>
-    
-        </div>
-    "; 
-    
-
-    
-    if($user_level == 2)
-    {
-        echo "<form id='delete' method='post' action='index.php'>";        
-        echo "<input name='post_id' type='hidden' value='$id' />";
-		echo "<input type='submit' name='delete' value='Delete Post' />";
-		
-        echo "</form>";
-    }
+            <h4 class='sub-txt-left' style='font-size:17px; color:#EAAC3B; margin:0px 15px 10px 17px; font-weight:normal;'>Description: $description</h4></a>";
+           if($user_level ==2)
+           {
+            echo "<form id='delete' method='post' action='index.php'>
+            <input name='post_id' type='hidden' value='$id' />
+            <input type='submit' name='delete' value='Delete Post' class='btn btn-default submit-btn'/>
+            </form>
+        </div>";
+           }
 }
-    
-        ?>
+?>
                         
     </body>
 </html>
