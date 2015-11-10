@@ -217,8 +217,7 @@
 				$vintage = mysql_result($rows, $i,"comments.vintage");
 				$comment_likes = mysql_result($rows, $i,"comments.comment_likes");
 				$comment_id = mysql_result($rows, $i,"comments.id");
-				
-              
+			
 			  if($user_level == 2)
 					
 					{
