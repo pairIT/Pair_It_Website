@@ -44,7 +44,9 @@
                                  <input type="text" name="last_name" class="form-control" style="margin-top:18px;"/>
                                  <input type="text" name="location" class="form-control" style="margin-top:18px;"/>
                                  <input type="email" name="user_email" class="form-control" style="margin-top:18px;">
-                                 <input type="password" name="user_pass" class="form-control" style="margin-top:18px;">
+                                 <input type="password" name="user_pass" class="form-control" placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
+            <span class="first"></span>
+            <label type="strength" id="label"></label><br>
                                  <input type="password" name="user_pass_check" class="form-control" style="margin-top:18px;"> 
                             </div>
                         </div>
@@ -255,13 +257,22 @@
                     ?> 
 
 
-                    <?php
-                        mysql_close();
-                    ?>
                 </div>
                 <div class="col-xs-4 col-md-4"></div>
             </div>
         </div>
     </div>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    <script src="javascripts/bootstrap.min.js"></script> 
+    <script src="js/jquery-1.11.2.js"></script> 
+<script src="js/password.js"></script>
+    
+<?php
+    mysql_close();
+?>
 </body>
 </html>
