@@ -15,16 +15,24 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <img src="photofile/logo.png" class="img-logo-profile">
+                   <a href="index.php"><img src="photofile/logo.png" class="img-logo-profile"></a>
                 </li>
                 <li>
                     <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
                 </li>
+				</br>
+				</br>
+				</br>
                 <li>
-                    <div class="verticalLine"></div>
+                    <a href="login.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGIN</h4></a>
                 </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
+				</br>
+				<li>
+                    <a href="Signup_photo.php"><h4 class="sub-txt-p" style="margin-left:-20px;">SIGN UP</h4></a>
+                </li>
+				</br>
+				<li>
+                   <a href="signout.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGOUT</h4></a>
                 </li>
             </ul>
         </div>
@@ -47,7 +55,6 @@
 session_start();        
 include 'connect.php';
         
-
 class Post
 {
     public $id;
@@ -125,7 +132,7 @@ echo '<div class="row">
             </form>
         </div>
         <div class="col-sm-4">
-            <h4 class="sub-txt-left" style="font-size:65px; margin-left:10px;">Did you know wine is good for your heart?</h4>
+            <h4 class="sub-txt-left" style="font-size:55px; margin-left:10px;">Did you know wine is good for your heart?</h4>
         </div>
      </div>';    
     

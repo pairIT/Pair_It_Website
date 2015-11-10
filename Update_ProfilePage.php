@@ -18,30 +18,38 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <img src="photofile/logo.png" class="img-logo-profile">
+                    <a href="index.php"><img src="photofile/logo.png" class="img-logo-profile"></a>
                 </li>
                 <li>
                     <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
                 </li>
+				</br>
+				</br>
+				</br>
                 <li>
-                    <div class="verticalLine"></div>
+                    <a href="login.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGIN</h4></a>
                 </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
+				</br>
+				<li>
+                    <a href="Signup_photo.php"><h4 class="sub-txt-p" style="margin-left:-20px;">SIGN UP</h4></a>
+                </li>
+				</br>
+				<li>
+                   <a href="signout.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGOUT</h4></a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-        
-        <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two">
+		
+		 <!-- Sidebar 2-->
+        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
             <br><br><br><br><br>
             <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
             <br><br><br><br>
             <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
         </div>
+    
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->

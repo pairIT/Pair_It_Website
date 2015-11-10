@@ -13,34 +13,42 @@
 <body class="main-wrapper">
     <div id="wrapper">
         
-        <!-- Sidebar -->
+       <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <img src="photofile/logo.png" class="img-logo-profile">
+                    <a href="index.php"><img src="photofile/logo.png" class="img-logo-profile"></a>
                 </li>
                 <li>
                     <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
                 </li>
+				</br>
+				</br>
+				</br>
                 <li>
-                    <div class="verticalLine"></div>
+                    <a href="login.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGIN</h4></a>
                 </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
+				</br>
+				<li>
+                    <a href="Signup_photo.php"><h4 class="sub-txt-p" style="margin-left:-20px;">SIGN UP</h4></a>
+                </li>
+				</br>
+				<li>
+                   <a href="signout.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGOUT</h4></a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
-        
-        <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two">
+		
+		 <!-- Sidebar 2-->
+        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
             <br><br><br><br><br>
             <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
             <br><br><br><br>
             <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
             <br><br><br><br>
-            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
         </div>
+    
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -58,7 +66,7 @@
                                 <i class="fa fa-pencil edit-btn"></i>
                             </div>
                         </a>
-                         <img src="http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'" class="img-logo-profile-pic">
+							<img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'" class="img-logo-profile-pic"/>
                         <br><br> 
                             <h4 class="sub-txt-style2">'.$_SESSION['user_name'].'</h4>
                         <hr class="hr-white">
@@ -66,11 +74,15 @@
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10"> ';
                                     
-                             
-                               
-                                echo  "The name is ".$_SESSION['user_name']."";
+                       
+                                //echo  "The name is ".$_SESSION['user_name']."";
                                 $user_name = $_SESSION['user_name'];
                                 $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
+								$name = mysql_query("SELECT first_name, last_name, location, user_email FROM users WHERE user_name='$user_name'");
+								$first_name = mysql_result($name,0,'users.first_name');
+								$last_name = mysql_result($name,0,'users.last_name');
+								$location = mysql_result($name,0,'users.location');
+								$user_email = mysql_result($name,0,'users.user_email');
                                 $rep = mysql_result($sql,0,'users.user_rep');
                                 
                               
@@ -92,6 +104,8 @@
                                
                                }
 
+									
+								
 
                             echo '
                                 
@@ -103,25 +117,26 @@
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name:</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['first_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$first_name"; echo '</h4>
                             </div>
+							
                             <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname:</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['last_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$last_name"; echo '</h4>
                             </div>
                             <div class="col-sm-1"></div>
-                        </div>
+                        </div> ';
 
-                        
+                         echo '
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['location'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$location"; echo '</h4>
                             </div>
                             <div class="col-sm-5">
                                 <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['user_email'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$user_email"; echo '</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
