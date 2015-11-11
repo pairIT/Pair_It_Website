@@ -7,9 +7,56 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+
 /* line 19, ../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
 body {
   margin: 0;
+}
+
+
+.main-wrapper {
+  background-color: #d9d9d9;
+}
+
+
+.backgound-style {
+background:#505D6E url(../img/wine_bg.png) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style2 {
+background:#505D6E url(../img/wine2.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style3 {
+background:#505D6E url(../img/wine3.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style4 {
+background:#505D6E url(../img/wine4.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 }
 
 /* line 33, ../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
@@ -8567,10 +8614,7 @@ button.close {
     display: none !important;
   }
 }
-/* line 4, ../sass/_custom.scss */
-.main-wrapper {
-  background-color: #d9d9d9;
-}
+
 
 /* line 8, ../sass/_custom.scss */
 .txt-center {
@@ -8806,10 +8850,7 @@ button.close {
 }
 */
 @media (min-width: 768px) {
-  /* line 112, ../sass/_profile.scss */
-  #wrapper {
-    padding-left: 210px;
-  }
+
 
   /* line 117, ../sass/_profile.scss */
   #sidebar-wrapper {
@@ -9096,4 +9137,84 @@ li {
   margin: 50px 50px 10px 0px;
   padding: 10px 20px 10px 20px;
   color: #333;
+}
+
+
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: #000;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: rgba(0,0,0,1);
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+/*        padding: 20px 0;*/
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
 }

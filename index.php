@@ -8,40 +8,48 @@
 <link rel="stylesheet" href="fonts/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-<body class="main-wrapper">
+
+    <body class="main-wrapper  backgound-style3" style="color:#fff;" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars" style="color:#fff;"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Pair IT
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Blog</a>
+                    </li>
+                    <li> 
+                        <a href="profile.php">Profile</a>
+                    </li>
+                    <li>
+                        <a href="Signup_photo.php">Register</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
     <div id="wrapper">
         
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <img src="photofile/logo.png" class="img-logo-profile">
-                </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
-                </li>
-                <li>
-                    <div class="verticalLine"></div>
-                </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        
-        <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
-            <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
-        </div>
-    
-        <!-- /#sidebar-wrapper -->
-<div style="margin-left:50px;">    
+<div style="margin-left:50px; margin-top:70px;">    
         
 <?php
 session_start();        

@@ -44,10 +44,10 @@
                                  <input type="text" name="last_name" class="form-control" style="margin-top:18px;"/>
                                  <input type="text" name="location" class="form-control" style="margin-top:18px;"/>
                                  <input type="email" name="user_email" class="form-control" style="margin-top:18px;">
-                                 <input type="password" name="user_pass" class="form-control" placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
+                                 <input type="password" name="user_pass" class="form-control" style="margin-top:18px; placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
             <span class="first"></span>
             <label type="strength" id="label"></label><br>
-                                 <input type="password" name="user_pass_check" class="form-control" style="margin-top:18px;"> 
+                                 <input type="password" name="user_pass_check" class="form-control" style="margin-top:0px;"> 
                             </div>
                         </div>
                         <div class="row">

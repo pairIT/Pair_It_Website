@@ -10,39 +10,45 @@
 
 </head>
 
-<body class="main-wrapper">
+<body class="main-wrapper  backgound-style" style="color:#fff;" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars" style="color:#fff;"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Pair IT
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Blog</a>
+                    </li>
+                    <li> 
+                        <a href="profile.php">Profile</a>
+                    </li>
+                    <li>
+                        <a href="Signup_photo.php">Register</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="wrapper">
         
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <img src="photofile/logo.png" class="img-logo-profile">
-                </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
-                </li>
-                <li>
-                    <div class="verticalLine"></div>
-                </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Log Out</h4>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        
-        <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two">
-            <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <?php
         session_start();
@@ -58,7 +64,7 @@
                                 <i class="fa fa-pencil edit-btn"></i>
                             </div>
                         </a>
-                         <img src="http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'" class="img-logo-profile-pic">
+                         <img src="photofile/'.$_SESSION['file_img'].'" class="img-logo-profile-pic"> 
                         <br><br> 
                             <h4 class="sub-txt-style2">'.$_SESSION['user_name'].'</h4>
                         <hr class="hr-white">
@@ -68,7 +74,6 @@
                                     
                              
                                
-                                echo  "The name is ".$_SESSION['user_name']."";
                                 $user_name = $_SESSION['user_name'];
                                 $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
                                 $rep = mysql_result($sql,0,'users.user_rep');
@@ -102,12 +107,10 @@
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name:</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['first_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name: '.$_SESSION['user_name'].'</h4>
                             </div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname:</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['last_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname: '.$_SESSION['last_name'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -116,12 +119,10 @@
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['location'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location: '.$_SESSION['location'].'</h4>
                             </div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
-                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'.$_SESSION['user_email'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email: '.$_SESSION['user_email'].'</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -144,5 +145,10 @@
     
     
     
-<script src="javascripts/bootstrap.min.js"></script>    
+<script src="javascripts/bootstrap.min.js"></script>   
+<script src="javascripts/jquery.min.js"></script>    
+<script src="javascripts/jquery.easings.min.js"></script> 
+<script src="javascripts/grayscale.js"></script> 
+
+    
 </html>
