@@ -80,6 +80,7 @@
 
                             </div>
                             <div class="col-md-8">
+
                                  <input type="text" name="user_name" class="form-control" placeholder="Type your username" style="margin-top:130px;"/><br> 
 									<input type="text" name="first_name" class="form-control" placeholder="Type your firstname"/><br>
 									<input type="text" name="last_name" class="form-control" placeholder="Type your lastname"/><br>
@@ -89,6 +90,7 @@
 									<span class="first"></span>
 									<label type="strength" id="label"></label><br>
                                  <input type="password" name="user_pass_check" placeholder="Confirm password" class="form-control" style="margin-top:18px;"> 
+
                             </div>
                         </div>
 						

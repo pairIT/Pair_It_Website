@@ -10,47 +10,45 @@
 
 </head>
 
-<body class="main-wrapper">
+<body class="main-wrapper  backgound-style" style="color:#fff;" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars" style="color:#fff;"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Pair IT
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.php">Blog</a>
+                    </li>
+                    <li> 
+                        <a href="profile.php">Profile</a>
+                    </li>
+                    <li>
+                        <a href="Signup_photo.php">Register</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Login</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="wrapper">
         
-       <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <a href="index.php"><img src="photofile/logo.png" class="img-logo-profile"></a>
-                </li>
-                <li>
-                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
-                </li>
-				</br>
-				</br>
-				</br>
-                <li>
-                    <a href="login.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGIN</h4></a>
-                </li>
-				</br>
-				<li>
-                    <a href="Signup_photo.php"><h4 class="sub-txt-p" style="margin-left:-20px;">SIGN UP</h4></a>
-                </li>
-				</br>
-				<li>
-                   <a href="signout.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGOUT</h4></a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-		
-		 <!-- Sidebar 2-->
-        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
-            <br><br><br><br><br>
-            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
-            <br><br><br><br>
-        </div>
-    
-        <!-- /#sidebar-wrapper -->
-
         <!-- Page Content -->
         <?php
         session_start();
@@ -66,7 +64,7 @@
                                 <i class="fa fa-pencil edit-btn"></i>
                             </div>
                         </a>
-							<img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'" class="img-logo-profile-pic"/>
+                         <img src="photofile/'.$_SESSION['file_img'].'" class="img-logo-profile-pic"> 
                         <br><br> 
                             <h4 class="sub-txt-style2">'.$_SESSION['user_name'].'</h4>
                         <hr class="hr-white">
@@ -74,8 +72,8 @@
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10"> ';
                                     
-                       
-                                //echo  "The name is ".$_SESSION['user_name']."";
+                             
+                               
                                 $user_name = $_SESSION['user_name'];
                                 $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
 								$name = mysql_query("SELECT first_name, last_name, location, user_email FROM users WHERE user_name='$user_name'");
@@ -104,8 +102,6 @@
                                
                                }
 
-									
-								
 
                             echo '
                                 
@@ -159,5 +155,10 @@
     
     
     
-<script src="javascripts/bootstrap.min.js"></script>    
+<script src="javascripts/bootstrap.min.js"></script>   
+<script src="javascripts/jquery.min.js"></script>    
+<script src="javascripts/jquery.easings.min.js"></script> 
+<script src="javascripts/grayscale.js"></script> 
+
+    
 </html>
