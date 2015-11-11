@@ -8,6 +8,45 @@
 
 </head>
 <body class="main-wrapper">
+		
+		<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                   <a href="index.php"><img src="photofile/logo.png" class="img-logo-profile"></a>
+                </li>
+                <li>
+                    <h4 class="sub-txt-p" style="margin-left:-20px;">Pair It</h4>
+                </li>
+				</br>
+				</br>
+				</br>
+                <li>
+                    <a href="login.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGIN</h4></a>
+                </li>
+				</br>
+				<li>
+                    <a href="Signup_photo.php"><h4 class="sub-txt-p" style="margin-left:-20px;">SIGN UP</h4></a>
+                </li>
+				</br>
+				<li>
+                   <a href="signout.php"><h4 class="sub-txt-p" style="margin-left:-20px;">LOGOUT</h4></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+		
+		 <!-- Sidebar 2-->
+        <div id="sidebar-wrapper-two" style="background-color:#EAAC3B; margin-right:50px;">
+            <br><br><br><br><br>
+            <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
+            <br><br><br><br>
+            <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
+            <br><br><br><br>
+        </div>
+    
+        <!-- /#sidebar-wrapper -->
+
     <div class="row">
         <div class="col-xs-12">
             <h1 class="txt-center heading-txt">Register</h1>
@@ -81,7 +120,7 @@
                               //add default photo    
 
                             } else {
-                                echo "File is not an image";
+                                 $errors[] = '<h4 class="sub-txt error-txt">File is not an image</h4>'; 
 
                                 $filename= "default_profile.jpg";
                                 $filepath = "photofile/".$filename;
@@ -102,9 +141,8 @@
                             $userNameData = mysql_result($rows,0,"user_name");
 
                             if($username == $usernameData){
-                                $errors[] = '<h4 class="sub-txt error-txt">The username is already taken.</h4>
-                                <br><form><button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>
-                                '; 
+                                $errors[] = '<h4 class="sub-txt error-txt">The username is already taken.</h4>'; 
+         
                             }                             
                             
                             if(!ctype_alnum($_POST['user_name'])){
@@ -236,21 +274,24 @@
 
                             if(!$result)
                             {
-                                echo '<h4 class="sub-txt error-txt">Something went wrong while registering. Please try again </h4>.<form><button type="button" onClick="goBack()" value="Refresh" class="btn btn-default submit-btn">Reload</button></form>';
+                                echo '<a href="Signup_photo.php" type="button" class="btn btn-default submit-btn">Reload</a>';
                             }
                             
                             else
                             {
 
                                 echo '<h4 class="sub-txt-center">Welcome '.$_SESSION['user_name'].' <br>You are successfully registered.<br> You can now Sign In and start posting! </h4>';
-
-                                echo  '<h4 class="sub-txt-center">You can also view your Profile Page and update your details.<br/>
-
-                                <img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>
-                                </h4>'; 
+								echo '<a href="login.php"><button type="button" class="btn btn-default submit-btn">Sign In</button></a><br><br>';
+								
+                                echo  '<h4 class="sub-txt-center">You can also view your Profile Page and update your details.<br/></h4>'; 
+								 
+								echo '<a href="profile.php"><button type="button" class="btn btn-default submit-btn">Profile Page</button></a>';
+								 
+                                echo  '<img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>';
+                             
                                 
-                                echo '<a href="login.php"><button type="button" class="btn btn-default submit-btn">Sign In</button></a><br><br>';
-                                echo '<a href="profile.php"><button type="button" class="btn btn-default submit-btn">Profile Page</button></a>';
+                                
+                               
                             }
                         }
                     }
@@ -262,7 +303,12 @@
             </div>
         </div>
     </div>
-    <script>
+
+	<?php
+    mysql_close();
+?>
+	<script>
+
     function goBack() {
         window.history.back();
     }
@@ -270,9 +316,8 @@
     <script src="javascripts/bootstrap.min.js"></script> 
     <script src="js/jquery-1.11.2.js"></script> 
 <script src="js/password.js"></script>
-    
-<?php
-    mysql_close();
-?>
+
+
+
 </body>
 </html>

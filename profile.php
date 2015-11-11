@@ -76,6 +76,11 @@
                                
                                 $user_name = $_SESSION['user_name'];
                                 $sql = mysql_query("SELECT user_rep FROM users WHERE user_name='$user_name'");
+								$name = mysql_query("SELECT first_name, last_name, location, user_email FROM users WHERE user_name='$user_name'");
+								$first_name = mysql_result($name,0,'users.first_name');
+								$last_name = mysql_result($name,0,'users.last_name');
+								$location = mysql_result($name,0,'users.location');
+								$user_email = mysql_result($name,0,'users.user_email');
                                 $rep = mysql_result($sql,0,'users.user_rep');
                                 
                               
@@ -107,22 +112,27 @@
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name: '.$_SESSION['user_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Name:</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$first_name"; echo '</h4>
                             </div>
+							
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname: '.$_SESSION['last_name'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Surname:</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$last_name"; echo '</h4>
                             </div>
                             <div class="col-sm-1"></div>
-                        </div>
+                        </div> ';
 
-                        
+                         echo '
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location: '.$_SESSION['location'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Location</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$location"; echo '</h4>
                             </div>
                             <div class="col-sm-5">
-                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email: '.$_SESSION['user_email'].'</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:60px; font-weight:200;">Email</h4>
+                                <h4 class="sub-txt" style="text-align:left; margin-top:20px;">'; echo "$user_email"; echo '</h4>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
