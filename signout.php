@@ -5,6 +5,8 @@
 <title>Sign Out</title>
  
 <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
+<link rel="stylesheet" href="fonts/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 

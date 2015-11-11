@@ -44,8 +44,7 @@
             <a href="profile.php"><i class="profile-06 icons-active" style="margin-left:120px; color:#fff; font-size:90px;"></i></a>
             <br><br><br><br>
             <a href="index.php"><i class="blog icons" style="margin-left:120px; font-size:90px;"></i></a>
-            <br><br><br><br>
-            <a href="notifications.php"><i class="notifications icons" style="margin-left:120px; font-size:90px;"></i></a>
+
         </div>
     
         <!-- /#sidebar-wrapper -->
@@ -86,6 +85,15 @@ if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION[
 if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true && $_SESSION['user_level'] == 2)
 {
     $user_level = 2;
+	
+	echo '<div class="row" style="margin-left:30px;">';
+    echo '<div class="col-md-12">';
+    echo '<div class="alert-box">';
+    echo 'Welcome,'. $_SESSION['user_name']. " " ;          
+    echo '</div>';
+    echo '<div>';
+    echo '</div>';
+    echo '<hr class="hr-long">';
 }
 
 if($user_level == 0)

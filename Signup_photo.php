@@ -5,6 +5,8 @@
 <title>Register</title>
     
 <link rel="stylesheet" href="stylesheets/styles.css" type="text/css" />
+<link rel="stylesheet" href="fonts/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 </head>
 <body class="main-wrapper">
@@ -78,17 +80,18 @@
 
                             </div>
                             <div class="col-md-8">
-                                 <input type="text" name="user_name" class="form-control" style="margin-top:130px;"/>
-                                 <input type="text" name="first_name" class="form-control" style="margin-top:18px;"/>
-                                 <input type="text" name="last_name" class="form-control" style="margin-top:18px;"/>
-                                 <input type="text" name="location" class="form-control" style="margin-top:18px;"/>
-                                 <input type="email" name="user_email" class="form-control" style="margin-top:18px;">
+                                 <input type="text" name="user_name" class="form-control" placeholder="Type your username" style="margin-top:130px;"/><br> 
+									<input type="text" name="first_name" class="form-control" placeholder="Type your firstname"/><br>
+									<input type="text" name="last_name" class="form-control" placeholder="Type your lastname"/><br>
+									<input type="text" name="location" class="form-control" placeholder="Type your location"/><br>
+									<input type="email" name="user_email" class="form-control" placeholder="Type your email address"/><br>
                                  <input type="password" name="user_pass" class="form-control" placeholder="Type your password" id="status" onkeyup="checkPassStrength()"/>
 									<span class="first"></span>
 									<label type="strength" id="label"></label><br>
-                                 <input type="password" name="user_pass_check" class="form-control" style="margin-top:18px;"> 
+                                 <input type="password" name="user_pass_check" placeholder="Confirm password" class="form-control" style="margin-top:18px;"> 
                             </div>
                         </div>
+						
                         <div class="row">
                             <input type="submit" name="btn_upload" value="Sign Up" class="btn btn-default submit-btn" style="margin-bottom:100px; margin-top:50px;">
                             </form>
@@ -280,6 +283,8 @@
                             else
                             {
 
+								echo  '<img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>';
+								
                                 echo '<h4 class="sub-txt-center">Welcome '.$_SESSION['user_name'].' <br>You are successfully registered.<br> You can now Sign In and start posting! </h4>';
 								echo '<a href="login.php"><button type="button" class="btn btn-default submit-btn">Sign In</button></a><br><br>';
 								
@@ -287,7 +292,7 @@
 								 
 								echo '<a href="profile.php"><button type="button" class="btn btn-default submit-btn">Profile Page</button></a>';
 								 
-                                echo  '<img src = "http://localhost:8888/PairIt/Pair_It_Website/'.$_SESSION['file_img'].'"/><br/>';
+                               
                              
                                 
                                 

@@ -224,7 +224,7 @@
 						
 					echo "<h3 class='sub-txt-left'><strong>$username</strong></h3>";
 					echo "<p> $brand_name $varietal $vintage</p>";
-					echo "<p><a class='like' href='#' name='btn_upload' onclick='add_like($comment_id);'>LIKE</a> <span id='comment_ $comment_id _likes'>$comment_likes</span> likes</p>";
+					echo "<p><a class='like' href='Single_post.php?post_id=$post_id' name='btn_upload' onclick='add_like($comment_id);'>LIKE</a> <span id='comment_ $comment_id _likes'>$comment_likes</span> likes</p>";
 
 					
 					echo "<form id='delete_comment' name='delete_comment' method='post' action='Single_post.php?post_id=$post_id'>";   
