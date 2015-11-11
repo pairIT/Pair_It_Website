@@ -7,9 +7,56 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+
 /* line 19, ../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
 body {
   margin: 0;
+}
+
+
+.main-wrapper {
+  background-color: #d9d9d9;
+}
+
+
+.backgound-style {
+background:#505D6E url(../img/wine_bg.png) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style2 {
+background:#505D6E url(../img/wine2.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style3 {
+background:#505D6E url(../img/wine3.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+.backgound-style4 {
+background:#505D6E url(../img/wine4.jpg) no-repeat center center fixed; 
+
+    min-height:100%;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 }
 
 /* line 33, ../../../../../Library/Ruby/Gems/2.0.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
@@ -8566,4 +8613,608 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+
+/* line 8, ../sass/_custom.scss */
+.txt-center {
+  text-align: center;
+}
+
+/* line 12, ../sass/_custom.scss */
+.heading-txt {
+  font-size: 6em;
+  font-weight: 100;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+/* line 19, ../sass/_custom.scss */
+.sub-txt-left {
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: left;
+}
+
+/* line 25, ../sass/_custom.scss */
+.sub-txt {
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: right;
+}
+
+/* line 31, ../sass/_custom.scss */
+.sub-txt-center {
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* line 37, ../sass/_custom.scss */
+.sub-txt-style2 {
+  font-size: 2em;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* line 43, ../sass/_custom.scss */
+.sub-txt-p {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #D9D9D9;
+  text-align: center;
+}
+
+/* line 51, ../sass/_custom.scss */
+.default-p {
+  font-size: 1em;
+  font-weight: 100;
+  color: #646464;
+  text-align: left;
+}
+
+/* line 59, ../sass/_custom.scss */
+.submit-btn {
+  width: 100%;
+  background-color: #333333;
+  color: #d9d9d9;
+}
+
+/* line 65, ../sass/_custom.scss */
+.submit-btn:hover {
+  width: 100%;
+  background-color: #FFC24B;
+  color: #333333;
+}
+
+/* line 71, ../sass/_custom.scss */
+.submit-btn:hover {
+  width: 100%;
+  background-color: #FFC24B;
+  color: #333333;
+}
+
+/* line 77, ../sass/_custom.scss */
+.profile-btn {
+  width: 100%;
+  background-color: #333333;
+  color: #d9d9d9;
+  padding: 15px;
+}
+
+/* line 84, ../sass/_custom.scss */
+.profile-btn:hover {
+  width: 100%;
+  background-color: #E54047;
+  color: #fff;
+  padding: 15px;
+}
+
+/* line 91, ../sass/_custom.scss */
+.error-txt {
+  text-align: center;
+  color: #DD3547;
+  font-weight: 300;
+}
+
+/* line 97, ../sass/_custom.scss */
+.icons:hover {
+  color: #fff;
+}
+
+/* line 101, ../sass/_custom.scss */
+.icons {
+  color: #333333;
+}
+
+/* line 105, ../sass/_custom.scss */
+.icons-active {
+  color: #fff;
+}
+
+/* line 109, ../sass/_custom.scss */
+.move {
+  margin-left: 145px;
+  margin-top: -45px;
+}
+
+/* line 1, ../sass/_profile.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 110px;
+  width: 0;
+  height: 100%;
+  margin-left: -110px;
+  overflow-y: auto;
+  background: #333333;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 17, ../sass/_profile.scss */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+/* line 24, ../sass/_profile.scss */
+#sidebar-wrapper-two {
+  z-index: 900;
+  position: fixed;
+  left: 220px;
+  width: 0;
+  height: 100%;
+  margin-left: -220px;
+  overflow-y: auto;
+  background: #E54047;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 39, ../sass/_profile.scss */
+#sidebar-wrapper-two-yellow {
+  z-index: 900;
+  position: fixed;
+  left: 220px;
+  width: 0;
+  height: 100%;
+  margin-left: -220px;
+  overflow-y: auto;
+  background: #EAAC3B;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Sidebar Styles */
+/* line 57, ../sass/_profile.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 66, ../sass/_profile.scss */
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 71, ../sass/_profile.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: red;
+    background: rgba(255,255,255,0.2);
+}
+*/
+/*
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+*/
+/*
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+*/
+/*
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+*/
+@media (min-width: 768px) {
+
+
+  /* line 117, ../sass/_profile.scss */
+  #sidebar-wrapper {
+    width: 110px;
+  }
+
+  /* line 121, ../sass/_profile.scss */
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+}
+/* line 128, ../sass/_profile.scss */
+.sidebar-nav-two {
+  position: absolute;
+  top: 0;
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 137, ../sass/_profile.scss */
+.sidebar-nav-two li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+/* line 142, ../sass/_profile.scss */
+.sidebar-nav-two li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: red;
+    background: rgba(255,255,255,0.2);
+}
+*/
+/*
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+*/
+/*
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+*/
+/*
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+*/
+@media (min-width: 768px) {
+  /* line 183, ../sass/_profile.scss */
+  #wrapper-twp {
+    padding-left: 210px;
+  }
+
+  /* line 188, ../sass/_profile.scss */
+  #sidebar-wrapper-two {
+    width: 220px;
+  }
+
+  /* line 192, ../sass/_profile.scss */
+  #page-content-wrapper-two {
+    padding: 20px;
+    position: relative;
+  }
+}
+/* line 199, ../sass/_profile.scss */
+.hr-white {
+  width: 83%;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #212020;
+  color: #212020;
+  border: 0 none;
+}
+
+/* line 209, ../sass/_profile.scss */
+.hr-long {
+  width: 100%;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  color: #fff;
+  border: 0 none;
+  margin-left: -20px;
+}
+
+/* line 220, ../sass/_profile.scss */
+.img-logo-profile {
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/* line 229, ../sass/_profile.scss */
+.img-logo-profile-pic {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+/* line 237, ../sass/_profile.scss */
+.verticalLine {
+  border-left: thin solid #D9D9D9;
+  height: 370px;
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* line 246, ../sass/_profile.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 250, ../sass/_profile.scss */
+.edit-btn {
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* line 256, ../sass/_profile.scss */
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #212020;
+  margin-left: 56%;
+  margin-bottom: -248px;
+}
+
+/* line 265, ../sass/_profile.scss */
+.circle:hover {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #E54047;
+  margin-left: 56%;
+  margin-bottom: -248px;
+}
+
+/* line 274, ../sass/_profile.scss */
+ul li {
+  text-decoration: none;
+  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 282, ../sass/_profile.scss */
+li {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 1, ../sass/_blog.scss */
+.sidebar-wrapper-blog {
+  z-index: 900;
+  position: fixed;
+  left: 220px;
+  width: 0;
+  height: 100%;
+  margin-left: -220px;
+  overflow-y: auto;
+  background: #EAAC3B;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 16, ../sass/_blog.scss */
+.search-bar {
+  width: 92%;
+  height: 35px;
+  border-radius: 5px;
+  margin: 20px 0px 50px 12px;
+  border-style: none;
+  padding: 0px 50px 0px 10px;
+}
+
+/* line 25, ../sass/_blog.scss */
+.search-icon {
+  margin-left: -40px;
+}
+
+/* line 29, ../sass/_blog.scss */
+.search {
+  background: none;
+  margin-left: -35px;
+  border: none;
+  color: rgba(255, 255, 255, 0);
+}
+
+/* line 36, ../sass/_blog.scss */
+.alert-box {
+  background-color: #5FD7C7;
+  padding: 5px 20px 5px 20px;
+  margin-right: 50px;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* line 46, ../sass/_blog.scss */
+.alert-box a {
+  color: #333;
+}
+
+/* line 50, ../sass/_blog.scss */
+.alert-box a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 55, ../sass/_blog.scss */
+.blog-box {
+  height: 200px;
+  width: 40%;
+  border-color: #333;
+  border: 2px;
+  background-color: rgba(245, 242, 242, 0.5);
+  margin: 50px 40px 10px 20px;
+  color: #333;
+}
+
+/* line 65, ../sass/_blog.scss */
+#blog-txt a {
+  color: #333;
+}
+
+/* line 69, ../sass/_blog.scss */
+#blog-txt a:hover {
+  color: #333;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* line 75, ../sass/_blog.scss */
+.blog-box-delete {
+  height: 200px;
+  width: 40%;
+  border-color: #333;
+  border: 2px;
+  background-color: rgba(245, 242, 242, 0.5);
+  margin: 250px -400px 10px 20px;
+  color: #333;
+}
+
+/* line 85, ../sass/_blog.scss */
+.blog-box-new {
+  height: 200px;
+  border-color: #333;
+  border: 2px;
+  background-color: rgba(245, 242, 242, 0.5);
+  margin: 50px 50px 10px 0px;
+  padding: 10px 20px 10px 20px;
+  color: #333;
+}
+
+
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover {
+    outline: 0;
+    color: rgba(255,255,255,.8);
+    background-color: transparent;
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+    outline: 0;
+    background-color: #000;
+}
+
+.navbar-custom .nav li.active {
+    outline: 0;
+}
+
+.navbar-custom .nav li.active a {
+    background-color: rgba(0,0,0,1);
+}
+
+.navbar-custom .nav li.active a:hover {
+    color: #fff;
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+/*        padding: 20px 0;*/
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        background: #000;
+    }
 }
